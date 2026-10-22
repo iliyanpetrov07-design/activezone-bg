@@ -2,13 +2,13 @@
    ActiveZone D2C Web Store & Real GA4 / GTM Tracking Engine (app.js)
    - All prices in EUR (€)
    - Free Shipping Threshold: €50.00
-   - 4 Storefront Departments -> 10 Sports + 11th БАБХ Supplements Pillar (40 SKUs)
+   - 4 Storefront Departments -> 10 Sports + 11th Supplements Pillar (40 SKUs)
    - Real Google Analytics 4 gtag('event', ...) + window.dataLayer.push(...)
    ========================================================================== */
 
 const FREE_SHIPPING_THRESHOLD_EUR = 50.00;
 const STANDARD_SHIPPING_EUR = 4.50;
-const STORAGE_KEY_CATALOG = 'activezone_catalog_v2';
+const STORAGE_KEY_CATALOG = 'activezone_catalog_v3';
 const STORAGE_KEY_GA4_ID = 'activezone_ga4_measurement_id';
 
 window.dataLayer = window.dataLayer || [];
@@ -75,7 +75,7 @@ const DEPARTMENTS = [
   {
     id: 'dept-4',
     name: 'Sports Nutrition & Recovery',
-    roleTag: 'БАБХ Сертифицирани',
+    roleTag: 'Възстановяване',
     sportIcon: 'supplements',
     sports: [
       'Протеини и възстановяване (3)',
@@ -97,7 +97,7 @@ const SPORT_CATEGORIES = [
   { id: 'tennis', name: 'Тенис и Падел', deptId: 'dept-3' },
   { id: 'basketball', name: 'Баскетбол и Волейбол', deptId: 'dept-3' },
   { id: 'combat', name: 'Бойни спортове и Бокс', deptId: 'dept-3' },
-  { id: 'supplements', name: 'Добавки и Витамини (БАБХ)', deptId: 'dept-4' }
+  { id: 'supplements', name: 'Добавки и Витамини', deptId: 'dept-4' }
 ];
 
 // 40 Hero Products across all 10 Sports (3-4 per sport) + 11th Supplements Pillar (6 SKUs)
@@ -598,13 +598,13 @@ const DEFAULT_PRODUCTS = [
     isConsumable: false
   },
 
-  // ================= 11. SUPPLEMENTS, VITAMINS & MINERALS — БАБХ (6 products) =================
+  // ================= 11. SUPPLEMENTS, VITAMINS & MINERALS (6 products) =================
   {
     id: 'AZ-SUP-01',
     name: 'Магнезий Цитрат + Бисглицинат & Витамин B6 (60 капс. / 30 дни)',
     deptId: 'dept-4',
     sportId: 'supplements',
-    sportLabel: 'Добавки и Витамини (БАБХ)',
+    sportLabel: 'Добавки и Витамини',
     brandTier: 'ActiveZone Signature Line',
     priceEur: 12.00,
     sageLevel: 'Ниво: Ежедневен прием',
@@ -618,7 +618,7 @@ const DEFAULT_PRODUCTS = [
     name: 'Електролитна формула HydroBoost Без Захар (30 дози)',
     deptId: 'dept-4',
     sportId: 'supplements',
-    sportLabel: 'Добавки и Витамини (БАБХ)',
+    sportLabel: 'Добавки и Витамини',
     brandTier: 'ActiveZone Signature Line',
     priceEur: 12.00,
     sageLevel: 'Ниво: Всички нива',
@@ -632,7 +632,7 @@ const DEFAULT_PRODUCTS = [
     name: 'Чист Суроватъчен Протеин Whey Isolate & Concentrate (1 кг / 33 дози)',
     deptId: 'dept-4',
     sportId: 'supplements',
-    sportLabel: 'Добавки и Витамини (БАБХ)',
+    sportLabel: 'Добавки и Витамини',
     brandTier: 'ActiveZone Signature Line',
     priceEur: 28.00,
     sageLevel: 'Ниво: Всички нива',
@@ -646,7 +646,7 @@ const DEFAULT_PRODUCTS = [
     name: '100% Микронизиран Креатин Монохидрат (300 г / 60 дози)',
     deptId: 'dept-4',
     sportId: 'supplements',
-    sportLabel: 'Добавки и Витамини (БАБХ)',
+    sportLabel: 'Добавки и Витамини',
     brandTier: 'ActiveZone Signature Line',
     priceEur: 16.00,
     sageLevel: 'Ниво: Силови и корт спортове',
@@ -660,7 +660,7 @@ const DEFAULT_PRODUCTS = [
     name: 'Хидролизиран Колаген Пептиди + Глюкозамин и Витамин C',
     deptId: 'dept-4',
     sportId: 'supplements',
-    sportLabel: 'Добавки и Витамини (БАБХ)',
+    sportLabel: 'Добавки и Витамини',
     brandTier: 'ActiveZone Signature Line',
     priceEur: 22.00,
     sageLevel: 'Ниво: Бегачи и планинари',
@@ -674,7 +674,7 @@ const DEFAULT_PRODUCTS = [
     name: 'Ежедневен Витаминен Стак: Витамин D3+K2 + Омега-3 (1000 мг)',
     deptId: 'dept-4',
     sportId: 'supplements',
-    sportLabel: 'Добавки и Витамини (БАБХ)',
+    sportLabel: 'Добавки и Витамини',
     brandTier: 'ActiveZone Signature Line',
     priceEur: 18.00,
     sageLevel: 'Ниво: Ежедневен прием (30 дни)',
@@ -731,7 +731,7 @@ const STARTER_BUNDLES = [
   {
     id: 'BUNDLE-RECOVERY-30D',
     name: 'Старт Пакет „Пълно Възстановяване (30 Дни)“',
-    sportBadge: 'Добавки БАБХ',
+    sportBadge: 'Добавки и Възстановяване',
     sportId: 'supplements',
     regularEur: 62.00,
     bundleEur: 55.80,
@@ -1035,7 +1035,7 @@ function renderProductsGrid() {
             <span class="brand-tier-badge ${isSig ? 'signature' : 'partner'}">
               ${isSig ? 'ActiveZone Signature Line' : 'Vetted Partner Brand'}
             </span>
-            ${p.isConsumable ? '<span class="feature-tag-pill">БАБХ Регистриран</span>' : ''}
+            ${p.isConsumable ? '<span class="feature-tag-pill">Чиста формула</span>' : ''}
             ${p.isFootwear ? '<span class="feature-tag-pill">СМ Калкулатор</span>' : ''}
           </div>
           <div class="product-icon-stage">
@@ -1120,7 +1120,7 @@ function resetFilters() {
 }
 
 // ==========================================================================
-// Interactive PDP Modal (view_item + CM Foot Calculator + 3-Point БАБХ Seal)
+// Interactive PDP Modal (view_item + CM Foot Calculator + Clean Nutrition Seal)
 // ==========================================================================
 function openPdpModal(productId) {
   const product = catalog.find((p) => p.id === productId);
@@ -1171,20 +1171,16 @@ function openPdpModal(productId) {
   const supplementSealHtml = product.isConsumable ? `
     <div class="nutrition-seal-box">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
-        <strong style="color: #0D3B66; font-size: 0.9rem;">3-Point Clean Nutrition Seal (Гаранция за чиста формула)</strong>
+        <strong style="color: #0D3B66; font-size: 0.9rem;">Гаранция за чиста формула и точен прием</strong>
         <span class="exchange-badge">30-дневен цикъл · Brevo Flow 3 (+25d Refill)</span>
       </div>
-      <div class="seal-points-grid">
+      <div class="seal-points-grid" style="grid-template-columns: repeat(2, 1fr);">
         <div class="seal-point">
-          <strong>1. БАБХ Регистрация</strong>
-          Официално вписана хранителна добавка с проверен произход и чистота на суровината.
-        </div>
-        <div class="seal-point">
-          <strong>2. Чиста формула</strong>
+          <strong>Чиста формула</strong>
           0 г скрити захари, без изкуствени пълнители и без излишен жаргон.
         </div>
         <div class="seal-point">
-          <strong>3. Точен дневен прием</strong>
+          <strong>Точен дневен прием</strong>
           Ясна дозировка на български език според твоя спорт и времето на тренировка.
         </div>
       </div>
@@ -1461,8 +1457,8 @@ function renderCartModal() {
     <div class="cross-sell-box">
       <div style="font-size: 0.84rem; font-weight: 700; color: #0D3B66;">
         ${remainingForFreeShip > 0
-          ? `Добави БАБХ добавка за €12.00 и отключи БЕЗПЛАТНА доставка над €50.00:`
-          : `Допълни поръчката си с БАБХ добавка за възстановяване:`}
+          ? `Добави добавка за €12.00 и отключи БЕЗПЛАТНА доставка над €50.00:`
+          : `Допълни поръчката си с добавка за възстановяване:`}
       </div>
       <div class="cross-sell-items">
         <div class="cross-sell-pill">

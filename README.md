@@ -6,15 +6,15 @@ This directory contains the interactive **`activezone.bg` Pure-Play D2C E-Commer
 
 | File | Description |
 | :--- | :--- |
-| [`index.html`](./index.html) | Interactive single-page storefront featuring the sticky Bulgarian trust bar, 4 storefront departments, 1-click *"Старт Пакети"* (-10% beginner bundles), 10-sport + БАБХ supplements catalog grid, native `<dialog>` modals (PDP, Cart/Checkout, Brevo Lead-Capture, Live Catalog Manager), and the floating GA4 `dataLayer` inspector. |
+| [`index.html`](./index.html) | Interactive single-page storefront featuring the Bulgarian trust bar, 4 storefront departments, 1-click *"Старт Пакети"* (-10% beginner bundles), 10-sport + supplements catalog grid, native `<dialog>` modals (PDP, Cart/Checkout, Brevo Lead-Capture, Live Catalog Manager), and the GA4 `dataLayer` inspector. |
 | [`styles.css`](./styles.css) | Official ActiveZone Brand Design System (`#0D3B66` Deep Navy, `#F95738` Vibrant Orange, `#2EC4B6` Aqua Cyan, `#F4F6F8` Soft Light Gray, `#1D1E2C` Dark Charcoal; `Montserrat Bold` headings + `Inter Regular` body text). |
-| [`app.js`](./app.js) | Complete 40-SKU catalog across 10 sports + БАБХ supplements, 4 starter bundles, interactive CM Foot Size Calculator (`+0.5 см спортен резерв`), €50 Free-Shipping progress bar + €12 supplement checkout cross-sell, live Catalog Editor (`localStorage`), and real-time `window.dataLayer` event engine. |
+| [`app.js`](./app.js) | Complete 40-SKU catalog across 10 sports + supplements, 4 starter bundles, interactive CM Foot Size Calculator (`+0.5 см спортен резерв`), €50 Free-Shipping progress bar + €12 supplement checkout cross-sell, live Catalog Editor (`localStorage`), and real-time `window.dataLayer` event engine. |
 
 ---
 
 ## Key Capabilities & Strategic Architecture
 
-### 1. 4 Storefront Departments → 10 Sports + 11th БАБХ Supplements Pillar (40 SKUs + 4 Bundles)
+### 1. 4 Storefront Departments → 10 Sports + 11th Supplements Pillar (40 SKUs + 4 Bundles)
 - **Department 1: Conditioning & Studio (Acquisition Spearhead — 11 SKUs):**
   1. *Бягане и маратон* (4 SKUs) · 2. *Фитнес, кросфит и домашни тренировки* (4 SKUs) · 3. *Йога, пилатес и мобилност* (3 SKUs)
 - **Department 2: Outdoor & Endurance (10 SKUs):**
@@ -22,7 +22,7 @@ This directory contains the interactive **`activezone.bg` Pure-Play D2C E-Commer
 - **Department 3: Team, Court & Combat (13 SKUs):**
   7. *Футбол* (4 SKUs) · 8. *Тенис и падел* (3 SKUs) · 9. *Баскетбол и волейбол* (3 SKUs) · 10. *Бойни спортове и бокс* (3 SKUs)
 - **Department 4: Sports Nutrition & Recovery (LTV & 30-Day Repeat Engine — 6 SKUs):**
-  11. *Хранителни добавки, протеини, витамини и минерали — регистрирани в БАБХ* (6 SKUs)
+  11. *Хранителни добавки, протеини, витамини и минерали* (6 SKUs)
 - **1-Click „Старт Пакети“ (-10% Beginner Starter Bundles):** 4 pre-matched gear + supplement bundles that automatically cross the **€50.00 (97.79 лв.)** free-delivery threshold.
 
 ### 2. Curated Hybrid D2C Model & Built-In "Sage (30%)" UX
@@ -31,7 +31,7 @@ This directory contains the interactive **`activezone.bg` Pure-Play D2C E-Commer
 - **Interactive Product Detail Modal (PDP):**
   - 1-sentence **"Съвет от треньора"** box on every product.
   - **Footwear Risk Reversal:** Interactive **CM Foot Size Calculator (`+0.5 см спортен резерв`)** + **Безплатна замяна на размер (Free Size Exchange via Speedy/Econt)**.
-  - **Supplement Trust:** **3-Point Clean Nutrition Seal** (*1. БАБХ Регистрация · 2. Чиста формула · 3. Точен дневен прием*).
+  - **Supplement Trust:** **Clean Nutrition Seal** (*Чиста формула · Точен дневен прием*).
   - **Async Coach Advisory:** *"Попитай Треньора в IG DM / Viber"* interactive prompt.
 
 ### 3. Bulgarian Checkout & €50 (97.79 лв.) Free-Shipping AOV Progress Bar
