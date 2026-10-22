@@ -39,7 +39,7 @@ This directory contains the interactive **`activezone.bg` Pure-Play D2C E-Commer
 - **Dynamic €50.00 Free-Shipping Progress Bar** inside the cart drawer with a 1-click **€12.00 Magnesium / Electrolyte cross-sell** prompt (+28% AOV lift).
 - Supports promo codes **`WELCOME10`** (-10%), **`DAN15`** (-15%), and **`SYLVIA15`** (-15%), plus **Speedy / Econt** locker & office selection (*Преглед, Тест и Наложен платеж*).
 
-### 4. Live GTM / GA4 `dataLayer` Inspector (`G-123456789A`)
+### 4. Live GTM / GA4 `dataLayer` Inspector (`G-8LKT5NYVJC`)
 Logs all 5 core funnel events in real time:
 1. `view_item` (`item_name`, `item_category`, `price`, `currency: 'EUR'`)
 2. `add_to_cart` (`item_id`, `item_name`, `item_category`, `quantity`, `value`)

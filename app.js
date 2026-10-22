@@ -9,7 +9,8 @@
 const FREE_SHIPPING_THRESHOLD_EUR = 50.00;
 const STANDARD_SHIPPING_EUR = 4.50;
 const STORAGE_KEY_CATALOG = 'activezone_catalog_v3';
-const STORAGE_KEY_GA4_ID = 'activezone_ga4_measurement_id';
+const STORAGE_KEY_GA4_ID = 'activezone_ga4_id_v2';
+const DEFAULT_GA4_ID = 'G-8LKT5NYVJC';
 
 window.dataLayer = window.dataLayer || [];
 function gtag() {
@@ -755,7 +756,7 @@ let state = {
   appliedCoupon: '',
   activePdpProduct: null,
   selectedShoeSize: 'EU 42.5 (26.5 см + 0.5 см резерв)',
-  ga4MeasurementId: localStorage.getItem(STORAGE_KEY_GA4_ID) || 'G-123456789A',
+  ga4MeasurementId: localStorage.getItem(STORAGE_KEY_GA4_ID) || DEFAULT_GA4_ID,
   firedEvents: new Set()
 };
 
@@ -766,25 +767,26 @@ function formatEur(val) {
 // ==========================================================================
 // Real Google Analytics 4 (gtag.js) Loader & Event Dispatcher
 // ==========================================================================
-function initRealGA4Script(measurementId) {
-  const cleanId = (measurementId || 'G-123456789A').trim();
+function initRealGA4Script(measurementId, isManualUpdate = false) {
+  const cleanId = (measurementId || DEFAULT_GA4_ID).trim();
   state.ga4MeasurementId = cleanId;
 
-  const dynamicScriptId = `ga4-gtag-${cleanId}`;
-  if (!document.getElementById(dynamicScriptId)) {
-    const script = document.createElement('script');
-    script.id = dynamicScriptId;
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(cleanId)}`;
-    document.head.appendChild(script);
-  }
+  if (cleanId !== DEFAULT_GA4_ID || isManualUpdate) {
+    const dynamicScriptId = `ga4-gtag-${cleanId}`;
+    if (!document.getElementById(dynamicScriptId)) {
+      const script = document.createElement('script');
+      script.id = dynamicScriptId;
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(cleanId)}`;
+      document.head.appendChild(script);
+    }
 
-  gtag('js', new Date());
-  gtag('config', cleanId, {
-    send_page_view: true,
-    currency: 'EUR',
-    debug_mode: true
-  });
+    gtag('config', cleanId, {
+      send_page_view: true,
+      currency: 'EUR',
+      debug_mode: true
+    });
+  }
 
   const idLabel = document.getElementById('active-ga4-id-label');
   if (idLabel) idLabel.textContent = cleanId;
@@ -795,9 +797,9 @@ function initRealGA4Script(measurementId) {
 function updateGA4MeasurementId() {
   const input = document.getElementById('ga4-measurement-id-input');
   if (!input) return;
-  const newId = input.value.trim() || 'G-123456789A';
+  const newId = input.value.trim() || DEFAULT_GA4_ID;
   localStorage.setItem(STORAGE_KEY_GA4_ID, newId);
-  initRealGA4Script(newId);
+  initRealGA4Script(newId, true);
   const statusEl = document.getElementById('ga4-id-save-status');
   if (statusEl) {
     statusEl.textContent = `✓ Активен GA4 ID: ${newId}`;
