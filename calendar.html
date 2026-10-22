@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LKT5NYVJC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8LKT5NYVJC');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ActiveZone.bg — Интерактивен Контент Календар и 12-Мин Студио (Октомври и Ноември 2026)</title>
+  <meta name="description" content="Интерактивен омниканален контент календар за портфолио на ActiveZone.bg: Meta Органик (Carousels, Reels, Stories), Meta Ads, Google Search Ads и Brevo Имейл Маркетинг с 12-минутен процес за изпълнение.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ==========================================================================
+       Interactive Content Calendar & 12-Minute Creative Studio Styles
+       Aligned with ActiveZone Design System (#0D3B66, #F95738, #2EC4B6, #F4F6F8)
+       ========================================================================== */
+    .cal-hero {
+      background: linear-gradient(135deg, var(--az-navy-dark) 0%, var(--az-navy) 65%, var(--az-navy-mid) 100%);
+      color: #FFFFFF;
+      padding: 2.75rem 0 2.25rem;
+      border-bottom: 4px solid var(--az-orange);
+    }
+
+    .cal-hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .cal-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(46, 196, 182, 0.18);
+      border: 1px solid rgba(46, 196, 182, 0.45);
+      color: #7CE8DF;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+    }
+
+    .cal-hero h1 {
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+      color: #FFFFFF;
+      margin-bottom: 0.75rem;
+    }
+
+    .cal-hero p {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.98rem;
+      max-width: 68ch;
+      margin-bottom: 1.25rem;
+    }
+
+    .month-switcher {
+      display: inline-flex;
+      background: rgba(8, 39, 69, 0.65);
+      padding: 0.3rem;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .month-tab {
+      border: none;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.78);
+      font-weight: 700;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      padding: 0.65rem 1.15rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.18s ease, color 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .month-tab.active {
+      background: var(--az-orange);
+      color: #FFFFFF;
+    }
+
+    .month-tab:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+    }
+
+    .speed-card {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+    }
+
+    .speed-card-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: #FFFFFF;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .speed-card-title span.timer-pill {
+      background: var(--az-cyan);
+      color: var(--az-navy-dark);
+      font-size: 0.76rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+    .speed-steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.65rem;
+    }
+
+    .speed-step {
+      background: rgba(8, 39, 69, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.75rem;
+      font-size: 0.8rem;
+    }
+
+    .speed-step strong {
+      display: block;
+      color: #7CE8DF;
+      font-size: 0.82rem;
+      margin-bottom: 0.15rem;
+    }
+
+    /* 4 Master Templates Bar */
+    .templates-section {
+      padding: 1.75rem 0 0.75rem;
+    }
+
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .template-card {
+      background: var(--az-surface);
+      border: 1px solid var(--az-border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      border-top: 4px solid var(--az-navy);
+    }
+
+    .template-card[data-tpl="M1"] { border-top-color: var(--az-navy); }
+    .template-card[data-tpl="M2"] { border-top-color: var(--az-orange); }
+    .template-card[data-tpl="M3"] { border-top-color: var(--az-cyan); }
+    .template-card[data-tpl="M4"] { border-top-color: #6366F1; }
+
+    .tpl-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--az-muted);
+    }
+
+    .tpl-time {
+      background: var(--az-gray);
+      color: var(--az-navy);
+      padding: 0.18rem 0.55rem;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    .template-card h3 {
+      font-size: 0.96rem;
+      color: var(--az-charcoal);
+    }
+
+    .template-card p {
+      font-size: 0.82rem;
+      color: var(--az-muted);
+      line-height: 1.45;
+    }
+
+    /* Controls Toolbar */
+    .cal-controls-bar {
+      background: var(--az-surface);
+      border: 1px solid var(--az-border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow-card);
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+    }
+
+    .filter-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--az-muted);
+      margin-right: 0.3rem;
+    }
+
+    .filter-pill {
+      border: 1px solid var(--az-border);
+      background: var(--az-gray);
+      color: var(--az-charcoal);
+      padding: 0.42rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-pill.active {
+      background: var(--az-navy);
+      color: #FFFFFF;
+      border-color: var(--az-navy);
+    }
+
+    .filter-pill:hover:not(.active) {
+      border-color: var(--az-navy);
+    }
+
+    .view-toggle-group {
+      display: inline-flex;
+      background: var(--az-gray);
+      padding: 0.22rem;
+      border-radius: 10px;
+      border: 1px solid var(--az-border);
+    }
+
+    .view-btn {
+      border: none;
+      background: transparent;
+      padding: 0.42rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--az-muted);
+      cursor: pointer;
+    }
+
+    .view-btn.active {
+      background: var(--az-surface);
+      color: var(--az-navy);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    /* Calendar Month Grid (7 Columns Mon-Sun) */
+    .calendar-grid-wrapper {
+      background: var(--az-surface);
+      border: 1px solid var(--az-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 2.5rem;
+    }
+
+    .cal-weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      background: var(--az-navy);
+      color: #FFFFFF;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 0.7rem 0.5rem;
+    }
+
+    .cal-days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      background: var(--az-border);
+      gap: 1px;
+    }
+
+    .cal-day-cell {
+      background: var(--az-surface);
+      min-height: 155px;
+      padding: 0.55rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .cal-day-cell.empty-day {
+      background: #F8FAFC;
+      color: #94A3B8;
+    }
+
+    .cal-day-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--az-muted);
+      padding-bottom: 0.25rem;
+      border-bottom: 1px dashed #E2E8F0;
+    }
+
+    .cal-day-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-weight: 800;
+      color: var(--az-charcoal);
+    }
+
+    .cal-day-cell.has-events .cal-day-num {
+      background: rgba(13, 59, 102, 0.09);
+      color: var(--az-navy);
+    }
+
+    .cal-week-tag {
+      font-size: 0.66rem;
+      color: var(--az-orange);
+      font-weight: 700;
+    }
+
+    /* Event Entry Pill inside Calendar Cell */
+    .cal-event-card {
+      text-align: left;
+      width: 100%;
+      border: 1px solid var(--az-border);
+      border-left: 4px solid var(--az-navy);
+      background: #F8FAFC;
+      border-radius: 8px;
+      padding: 0.45rem 0.5rem;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.22rem;
+    }
+
+    .cal-event-card:hover {
+      background: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(13, 59, 102, 0.12);
+    }
+
+    .cal-event-card[data-channel="meta_organic"] { border-left-color: var(--az-navy); }
+    .cal-event-card[data-channel="meta_ads"] { border-left-color: var(--az-orange); background: rgba(249, 87, 56, 0.05); }
+    .cal-event-card[data-channel="google_ads"] { border-left-color: var(--az-cyan-dark); background: rgba(46, 196, 182, 0.07); }
+    .cal-event-card[data-channel="brevo_email"] { border-left-color: #6366F1; background: rgba(99, 102, 241, 0.06); }
+
+    .ev-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.67rem;
+      font-weight: 700;
+    }
+
+    .ev-channel-badge {
+      padding: 0.1rem 0.38rem;
+      border-radius: 4px;
+      font-size: 0.64rem;
+      font-weight: 800;
+    }
+
+    .badge-meta-org { background: rgba(13, 59, 102, 0.12); color: var(--az-navy); }
+    .badge-meta-ads { background: rgba(249, 87, 56, 0.16); color: #C22E13; }
+    .badge-google-ads { background: rgba(46, 196, 182, 0.2); color: #0F6B61; }
+    .badge-brevo { background: rgba(99, 102, 241, 0.16); color: #4338CA; }
+
+    .ev-time {
+      color: var(--az-muted);
+      font-size: 0.65rem;
+    }
+
+    .ev-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--az-charcoal);
+      line-height: 1.28;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .ev-meta-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.65rem;
+      color: var(--az-muted);
+      margin-top: 0.1rem;
+    }
+
+    /* Weekly List View & 9-Grid View */
+    .weekly-list-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .week-block {
+      background: var(--az-surface);
+      border: 1px solid var(--az-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .week-block-header {
+      background: var(--az-navy);
+      color: #FFFFFF;
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .week-block-header h3 {
+      font-size: 1rem;
+      color: #FFFFFF;
+    }
+
+    .week-block-header span {
+      font-size: 0.82rem;
+      color: #7CE8DF;
+      font-weight: 600;
+    }
+
+    .week-rows {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1rem;
+      padding: 1.15rem;
+    }
+
+    /* IG 9-Grid View */
+    .ig-profile-preview {
+      max-width: 880px;
+      margin: 0 auto 2.5rem;
+      background: var(--az-surface);
+      border: 1px solid var(--az-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .ig-bio-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--az-border);
+      margin-bottom: 1.25rem;
+    }
+
+    .ig-avatar {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background: var(--az-navy);
+      border: 3px solid var(--az-orange);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .ig-feed-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+    }
+
+    .ig-grid-tile {
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      padding: 1rem;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.16s ease;
+      text-align: left;
+      border: none;
+    }
+
+    .ig-grid-tile:hover {
+      transform: scale(1.015);
+    }
+
+    /* Creative Studio Modal (<dialog>) */
+    dialog#creative-studio-dialog {
+      width: min(1080px, 95vw);
+      max-height: 90vh;
+      margin: auto;
+      border: none;
+      border-radius: var(--radius-lg);
+      padding: 0;
+      background: var(--az-surface);
+      color: var(--az-charcoal);
+      box-shadow: var(--shadow-modal);
+      overflow: hidden;
+    }
+
+    dialog#creative-studio-dialog::backdrop {
+      background-color: rgba(8, 39, 69, 0.68);
+      backdrop-filter: blur(3px);
+    }
+
+    .studio-modal-header {
+      background: var(--az-navy);
+      color: #FFFFFF;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .studio-modal-body {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      max-height: calc(90vh - 76px);
+      overflow-y: auto;
+    }
+
+    /* Left Column: Live Visual Mockup Frame */
+    .mockup-stage {
+      background: var(--az-gray);
+      border: 1px solid var(--az-border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+
+    .visual-canvas-card {
+      width: 100%;
+      max-width: 380px;
+      background: var(--az-navy);
+      color: #FFFFFF;
+      border-radius: 16px;
+      padding: 1.4rem;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 14px 28px rgba(13, 59, 102, 0.22);
+      position: relative;
+    }
+
+    .visual-canvas-card.aspect-story {
+      min-height: 440px;
+      background: linear-gradient(165deg, var(--az-navy-dark) 0%, var(--az-navy) 60%, #134B80 100%);
+    }
+
+    .visual-canvas-card.aspect-serp {
+      background: #FFFFFF;
+      color: var(--az-charcoal);
+      border: 1px solid var(--az-border);
+      min-height: auto;
+    }
+
+    .slide-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 380px;
+      gap: 0.5rem;
+    }
+
+    /* Right Column: 12-Minute Execution Kit */
+    .exec-kit-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .exec-box {
+      background: var(--az-gray);
+      border: 1px solid var(--az-border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+    }
+
+    .exec-box-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.55rem;
+      gap: 0.5rem;
+    }
+
+    .exec-box-head h4 {
+      font-size: 0.88rem;
+      color: var(--az-navy);
+    }
+
+    .copy-pre {
+      background: var(--az-surface);
+      border: 1px solid var(--az-border);
+      border-radius: 8px;
+      padding: 0.75rem;
+      font-size: 0.83rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      max-height: 170px;
+      overflow-y: auto;
+      color: var(--az-charcoal);
+    }
+
+    .copy-btn {
+      border: 1px solid var(--az-navy);
+      background: var(--az-navy);
+      color: #FFFFFF;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .copy-btn:hover {
+      background: var(--az-orange);
+      border-color: var(--az-orange);
+    }
+
+    .poll-option-btn {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      margin-top: 0.45rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.12);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.84rem;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .poll-option-btn:hover, .poll-option-btn.voted {
+      background: var(--az-cyan);
+      color: var(--az-navy-dark);
+      border-color: var(--az-cyan);
+    }
+
+    @media (max-width: 1024px) {
+      .cal-hero-grid, .studio-modal-body {
+        grid-template-columns: 1fr;
+      }
+      .templates-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .cal-weekdays {
+        display: none;
+      }
+      .cal-days-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      }
+      .cal-day-cell.empty-day {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .templates-grid, .ig-feed-grid, .speed-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. SITE HEADER (Connected to Main ActiveZone Storefront)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div>
+          <span class="logo-title">ACTIVE<span>ZONE</span>.BG</span>
+          <span class="logo-subtitle">Контент Календар и 12-Мин Студио</span>
+        </div>
+      </a>
+
+      <nav class="header-nav" aria-label="Навигация на календара">
+        <a href="index.html" class="nav-link">← Към Магазина</a>
+        <a href="#templates-anchor" class="nav-link">4 Шаблона (12 мин/пост)</a>
+        <a href="#calendar-anchor" class="nav-link">Календар Октомври</a>
+        <a href="../ActiveZone_Full_Case_Study.html" class="nav-link">Пълен Case Study</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-ghost-light btn-sm" onclick="exportCalendarCSV()">
+          ⬇ CSV за Google Sheets
+        </button>
+        <a href="index.html#catalog-section" class="btn btn-orange btn-sm">
+          Виж 40-те Продукта
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. HERO & 12-MINUTE EXECUTION ENGINE OVERVIEW
+       ======================================================================== -->
+  <section class="cal-hero">
+    <div class="container cal-hero-grid">
+      <div>
+        <div class="cal-hero-badge">
+          <span>Омниканално Портфолио · Meta Органик + Meta Ads + Google Search + Brevo</span>
+        </div>
+        <h1>Интерактивен Контент Календар и 12-Минутно Творческо Студио</h1>
+        <p>
+          Създаден за портфолио демонстрация и реално изпълнение от 1 човек: всеки слот в календара комбинира <strong>жива визуална симулация</strong> (плъзгащ се карусел, 15-секунден Reel сториборд, интерактивна анкета, SERP реклама или имейл) с готов български текст, AI промпт за Sora/Gemini и Canva шаблон за <strong>10–15 минути на публикация</strong>.
+        </p>
+
+        <div class="month-switcher" role="tablist" aria-label="Избор на месец">
+          <button type="button" class="month-tab active" id="tab-oct" onclick="switchMonth('october')">
+            <span>📅 Октомври 2026: Фаза 1 Бранд Старт (30 активности)</span>
+          </button>
+          <button type="button" class="month-tab" id="tab-nov" onclick="switchMonth('november')">
+            <span>⚡ Ноември 2026: Фаза 2 Evergreen + Black Friday Спринт (Следваща стъпка)</span>
+          </button>
+        </div>
+      </div>
+
+      <aside class="speed-card" aria-label="12-минутна формула за изпълнение">
+        <div class="speed-card-title">
+          <span>⚡ Формулата „12 Минути на Заглавие“</span>
+          <span class="timer-pill">Средно: 12 мин</span>
+        </div>
+        <div class="speed-steps">
+          <div class="speed-step">
+            <strong>1. Копирайтинг (0 мин)</strong>
+            100% готов текст, куки и хаштагове — копиране с 1 клик.
+          </div>
+          <div class="speed-step">
+            <strong>2. AI Визия (3 мин)</strong>
+            Готов промпт за Sora / Gemini / Canva Magic Media с цветовете на бранда.
+          </div>
+          <div class="speed-step">
+            <strong>3. Canva Шаблон (7 мин)</strong>
+            Зареждане в 1 от 4-те заключени шаблона (M1–M4) без празен екран.
+          </div>
+          <div class="speed-step">
+            <strong>4. UTM и Планиране (2 мин)</strong>
+            Готов UTM таг за GA4 (`G-8LKT5NYVJC`) и час за публикуване.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. THE 4 REUSABLE MASTER TEMPLATES
+       ======================================================================== -->
+  <main class="container">
+    <section id="templates-anchor" class="templates-section" aria-label="4 Основни Шаблона">
+      <div class="templates-grid">
+        <article class="template-card" data-tpl="M1">
+          <div class="tpl-head">
+            <span>ШАБЛОН M1 · КАРУСЕЛ</span>
+            <span class="tpl-time">⏱️ 12 мин</span>
+          </div>
+          <h3>AZ-Carousel-5/7 (Navy & Orange)</h3>
+          <p>Слайд 1 с Montserrat Bold кука на `#0D3B66`, 1 съвет + икона на слайд и финален оранжев банер <em>„Запази този пост“</em>.</p>
+        </article>
+
+        <article class="template-card" data-tpl="M2">
+          <div class="tpl-head">
+            <span>ШАБЛОН M2 · 9:16 REEL</span>
+            <span class="tpl-time">⏱️ 14 мин</span>
+          </div>
+          <h3>AZ-Reel-15s-4Cut (Динамично Видео)</h3>
+          <p>Фиксиран 15-секунден ритъм: <code>[0–3s]</code> Визуална кука → <code>[3–9s]</code> Действие → <code>[9–12s]</code> Екипировка/Добавка → <code>[12–15s]</code> Лого.</p>
+        </article>
+
+        <article class="template-card" data-tpl="M3">
+          <div class="tpl-head">
+            <span>ШАБЛОН M3 · СТОРИ СТИКЕР</span>
+            <span class="tpl-time">⏱️ 6 мин</span>
+          </div>
+          <h3>AZ-Story-Sticker (Анкети и Въпроси)</h3>
+          <p>Готова 9:16 рамка със свободна централна зона за нативни Instagram Poll, Quiz и Question стикери във вторник и неделя.</p>
+        </article>
+
+        <article class="template-card" data-tpl="M4">
+          <div class="tpl-head">
+            <span>ШАБЛОН M4 · ADS & BREVO</span>
+            <span class="tpl-time">⏱️ 10 мин</span>
+          </div>
+          <h3>AZ-Omnichannel-Ad-Mail</h3>
+          <p>Преизползва визията от седмицата в 1:1 Meta Ad банер, Google Search DKI група или Brevo блок с безплатна доставка над €50.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. INTERACTIVE FILTER & VIEW CONTROLS
+         ====================================================================== -->
+    <section id="calendar-anchor" class="cal-controls-bar" aria-label="Филтри на календара">
+      <div class="filter-group" id="channel-filters">
+        <span class="filter-label">Канал:</span>
+        <button type="button" class="filter-pill active" data-filter="all" onclick="setChannelFilter('all')">Всички (30)</button>
+        <button type="button" class="filter-pill" data-filter="meta_organic" onclick="setChannelFilter('meta_organic')">Meta Органик (22)</button>
+        <button type="button" class="filter-pill" data-filter="meta_ads" onclick="setChannelFilter('meta_ads')">Meta Paid Ads (4)</button>
+        <button type="button" class="filter-pill" data-filter="google_ads" onclick="setChannelFilter('google_ads')">Google Search Ads (3)</button>
+        <button type="button" class="filter-pill" data-filter="brevo_email" onclick="setChannelFilter('brevo_email')">Brevo Имейл (4)</button>
+      </div>
+
+      <div class="view-toggle-group" role="group" aria-label="Изглед на календара">
+        <button type="button" class="view-btn active" id="view-grid-btn" onclick="setCalendarView('grid')">📅 Месечна Мрежа</button>
+        <button type="button" class="view-btn" id="view-list-btn" onclick="setCalendarView('list')">📋 По Седмици (1–5)</button>
+        <button type="button" class="view-btn" id="view-ig-btn" onclick="setCalendarView('ig')">📱 IG 9-Grid Превю</button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. CALENDAR VIEWS CONTAINER
+         ====================================================================== -->
+    <div id="october-section">
+      <!-- View A: 7-Column Monthly Grid -->
+      <div id="cal-view-grid" class="calendar-grid-wrapper">
+        <div class="cal-weekdays">
+          <div>Понеделник (Pillar 1 Карусел)</div>
+          <div>Вторник (Стори Анкета)</div>
+          <div>Сряда (Pillar 2 Продукти/Добавки)</div>
+          <div>Четвъртък (Имейл / Paid Sync)</div>
+          <div>Петък (Pillar 3 Общност / UGC)</div>
+          <div>Събота (Специален Слот)</div>
+          <div>Неделя (Спортна Анкета)</div>
+        </div>
+        <div id="october-days-grid" class="cal-days-grid"></div>
+      </div>
+
+      <!-- View B: 5-Week Structured Breakdown -->
+      <div id="cal-view-list" class="weekly-list-container" hidden></div>
+
+      <!-- View C: Instagram 9-Post Visual Grid Preview -->
+      <div id="cal-view-ig" class="ig-profile-preview" hidden>
+        <div class="ig-bio-header">
+          <div class="ig-avatar">AZ</div>
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem;">@activezonebg · ActiveZone Bulgaria</h3>
+            <p style="font-size: 0.86rem; color: var(--az-muted); margin-bottom: 0.35rem;">
+              Спортен магазин · Движи се. Тренирай. Живей активно. · Екипировка за 10 спорта + Витамини и Добавки
+            </p>
+            <span style="font-size: 0.78rem; font-weight: 700; color: var(--az-navy);">
+              Кликни върху всяка плочка от решетката, за да отвориш слайдовете, сториборда и 12-минутния план за изпълнение:
+            </span>
+          </div>
+        </div>
+        <div id="ig-grid-tiles" class="ig-feed-grid"></div>
+      </div>
+    </div>
+
+    <!-- November Preview Placeholder (Ready for Step 2) -->
+    <div id="november-section" hidden style="background: var(--az-surface); border: 1px solid var(--az-border); border-radius: var(--radius-md); padding: 2.25rem; margin-bottom: 2.5rem; text-align: center; box-shadow: var(--shadow-card);">
+      <span class="cal-hero-badge" style="background: rgba(249, 87, 56, 0.12); color: var(--az-orange); border-color: rgba(249, 87, 56, 0.3);">
+        Следваща стъпка в нашия работен процес
+      </span>
+      <h2 style="font-size: 1.6rem; color: var(--az-navy); margin-bottom: 0.65rem;">
+        Ноември 2026: Фаза 2 Evergreen + Посланици (@coach_danmarkov & @sylvia.activejourney) + 7-Дневен Black Friday Спринт
+      </h2>
+      <p style="max-width: 68ch; margin: 0 auto 1.25rem; color: var(--az-muted); font-size: 0.95rem;">
+        След като прегледаш и одобриш интерактивния календар за <strong>Октомври 2026</strong>, ще активираме тук пълната програма за <strong>Ноември 2026</strong> (Седмици 1–3 Evergreen + кодове <code>DAN15</code> / <code>SYLVIA15</code> и изолирания 7-дневен Black Friday спринт до -40% с Google Ads Data Exclusions).
+      </p>
+      <button type="button" class="btn btn-orange" onclick="switchMonth('october')">
+        ← Върни се към Октомври 2026 (30 готови слота)
+      </button>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       6. CREATIVE STUDIO & 12-MINUTE EXECUTION MODAL (<dialog closedby="any">)
+       ======================================================================== -->
+  <dialog id="creative-studio-dialog" closedby="any" aria-labelledby="studio-modal-title">
+    <div class="studio-modal-header">
+      <div>
+        <div id="studio-modal-meta" style="font-size: 0.78rem; color: #7CE8DF; font-weight: 700; margin-bottom: 0.2rem;"></div>
+        <h2 id="studio-modal-title" style="font-size: 1.18rem; color: #FFFFFF;"></h2>
+      </div>
+      <form method="dialog">
+        <button type="submit" class="btn btn-ghost-light btn-sm" aria-label="Затвори прозореца">✕ Затвори (Esc)</button>
+      </form>
+    </div>
+
+    <div class="studio-modal-body">
+      <!-- Left: Interactive Creative Preview -->
+      <div class="mockup-stage">
+        <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; font-weight: 700; color: var(--az-navy);">
+          <span id="mockup-format-label">Живо Визуално Превю</span>
+          <span id="mockup-template-badge" class="tpl-time"></span>
+        </div>
+
+        <div id="mockup-canvas-container" style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;"></div>
+      </div>
+
+      <!-- Right: 12-Minute Execution Kit -->
+      <div class="exec-kit-column">
+        <div class="exec-box" style="background: rgba(46, 196, 182, 0.1); border-color: rgba(46, 196, 182, 0.35);">
+          <div class="exec-box-head" style="margin-bottom: 0.25rem;">
+            <h4 id="exec-timer-heading">⚡ План за изпълнение за 12 минути</h4>
+            <span id="exec-pillar-badge" style="font-size: 0.75rem; font-weight: 700; color: var(--az-navy);"></span>
+          </div>
+          <p id="exec-steps-summary" style="font-size: 0.82rem; color: var(--az-charcoal);"></p>
+        </div>
+
+        <div class="exec-box">
+          <div class="exec-box-head">
+            <h4>1. Готов Български Текст + Хаштагове (0 мин)</h4>
+            <button type="button" class="copy-btn" onclick="copyStudioField('studio-copy-text', this)">Копирай текста</button>
+          </div>
+          <div id="studio-copy-text" class="copy-pre"></div>
+        </div>
+
+        <div class="exec-box">
+          <div class="exec-box-head">
+            <h4>2. AI Промпт за Sora / Gemini / Canva (3 мин)</h4>
+            <button type="button" class="copy-btn" onclick="copyStudioField('studio-ai-prompt', this)">Копирай AI Промпт</button>
+          </div>
+          <div id="studio-ai-prompt" class="copy-pre" style="font-family: var(--font-mono); font-size: 0.78rem;"></div>
+        </div>
+
+        <div class="exec-box">
+          <div class="exec-box-head">
+            <h4>3. Таргетиране, UTM Линк и Целеви KPI (2 мин)</h4>
+            <button type="button" class="copy-btn" onclick="copyStudioField('studio-utm-text', this)">Копирай UTM</button>
+          </div>
+          <div id="studio-utm-text" class="copy-pre" style="max-height: 95px; font-size: 0.8rem;"></div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    /* ==========================================================================
+       OCTOBER 2026 MASTER OMNICHANNEL CONTENT CALENDAR DATA (30 TOUCHPOINTS)
+       ========================================================================== */
+    const OCTOBER_EVENTS = [
+      {
+        id: 'oct-1-reel',
+        day: 1,
+        dateLabel: 'Четвъртък, 1 Октомври 2026',
+        time: '09:00',
+        week: 1,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (IG + FB Reel)',
+        format: 'reel',
+        template: 'M2: AZ-Reel-15s-4Cut (14 мин)',
+        pillar: 'Pillar 1 · Мотивация (Hero 70%)',
+        dept: 'Всички 10 спорта + Добавки',
+        title: 'Манифест Reel: „Една малка стъпка… прави огромна разлика“',
+        slides: [
+          { tag: 'КАДЪР 1 · [0–3 сек]', head: 'Близък кадър: Завързване на маратонки', body: 'Визуална кука в първата секунда с енергичен бийт (без текст в първите 2 сек).' },
+          { tag: 'КАДЪР 2 · [3–6 сек]', head: 'Динамична загрявка у дома', body: 'Кратко разтягане и подготовка за сутрешно движение.' },
+          { tag: 'КАДЪР 3 · [6–12 сек]', head: 'Текст на екрана: „Една малка стъпка…“', body: 'Взима шейкър с електролити HydroBoost, излиза навън и тича с приятели в парка.' },
+          { tag: 'КАДЪР 4 · [12–15 сек]', head: '„…прави огромна разлика.“', body: 'Близък кадър на обувки, раница и бутилка ActiveZone → Лого на #0D3B66 Deep Navy: „Движи се. Тренирай. Живей активно.“' }
+        ],
+        copy: `Всеки, който прави една малка крачка днес, вече е спортист. 🏃💨\n\nДобре дошъл в ActiveZone — спортна екипировка за 10 спорта + чисти хранителни добавки и витамини от спортисти за спортисти.\n\nДнес твоят ден за движение ли е? Напиши ни в коментар каква тренировка планираш! 👇\n\n#ActiveZone #ActiveZoneLife #BeActiveEveryday #StayMotivated`,
+        aiPrompt: `Cinematic 9:16 vertical video, 4 dynamic cuts: (1) close-up lacing deep navy #0D3B66 and vibrant orange #F95738 running shoes at sunrise, (2) quick dynamic stretch at home, (3) grabbing aqua electrolyte shaker and stepping out, (4) jogging in a green Sofia park with friends, authentic natural lighting.`,
+        steps: `0 мин копиране на текста · 4 мин генериране/избор на 4 кратки 3-сек клипа · 8 мин сглобяване в шаблон M2 с автоматични субтитри · 2 мин планиране.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w1_manifesto_reel\nЦелеви KPI: 2,500+ уникален обхват · 1,500+ ThruPlay гледания · Захранва 30d Warm Engagers пула.`
+      },
+      {
+        id: 'oct-1-meta-tof',
+        day: 1,
+        dateLabel: 'Четвъртък, 1 Октомври 2026',
+        time: '09:30',
+        week: 1,
+        channel: 'meta_ads',
+        channelName: 'Meta Paid Ads (TOF CBO)',
+        format: 'ad_meta',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (10 мин)',
+        pillar: 'Paid TOF · Seeding (€350/мес)',
+        dept: 'CBO Проспектинг (TOF-AS1)',
+        title: 'Старт на AZ_TOF_Engagement_Warmup_CBO (TOF-AS1)',
+        adPreview: {
+          headline: 'Движи се. Тренирай. Живей активно с ActiveZone',
+          desc: 'Екипировка за 10 спорта + чисти витамини и добавки от спортисти за спортисти.',
+          cta: 'Научи повече',
+          badge: 'TOF-AS1 · In-Platform Engagement'
+        },
+        copy: `Всеки, който прави една малка крачка днес, вече е спортист! 💪 Открий практични съвети за тренировки, възстановяване и екипировка за 10 спорта в страницата на ActiveZone България. Присъедини се към отбора! #ActiveZone #ActiveZoneLife`,
+        aiPrompt: `Use existing 15s Brand Manifesto Reel (Asset 2) in 9:16 Reels/Stories and 4:5 Feed placement with Deep Navy #0D3B66 end-card.`,
+        steps: `0 мин копи · 5 мин дублиране на органичния Reel като Dark/Boosted Post в Ads Manager · 5 мин задаване на изключения (30d Purchasers, Cart Abandoners).`,
+        utm: `Кампания: AZ_TOF_Engagement_Warmup_CBO · Ad Set: TOF-AS1 (България, 18–35, интереси 10 спорта + добавки).\nЦелеви KPI: Нисък CPM, събиране на 75% видео гледания за BOF ретаргетинг.`
+      },
+      {
+        id: 'oct-1-google',
+        day: 1,
+        dateLabel: 'Четвъртък, 1 Октомври 2026',
+        time: '10:00',
+        week: 1,
+        channel: 'google_ads',
+        channelName: 'Google Search Ads',
+        format: 'ad_google',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (10 мин)',
+        pillar: 'Paid Search · Високо Намерение (€300/мес)',
+        dept: '5 Рекламни Групи (AG1–AG5)',
+        title: 'Старт на AZ_Search_Core_BG (5 Ad Groups + DKI + -10% Промо)',
+        serpPreview: {
+          url: 'https://activezone.bg › маратонки-и-добавки',
+          h1: '{KeyWord:Качествена Спортна Екипировка}',
+          h2: '10 Спорта + Витамини и Добавки | ActiveZone',
+          h3: 'Доставка със Спиди/Еконт · Безплатна над €50',
+          d1: 'Открий надеждна екипировка за 10 спорта, протеини, витамини и минерали на достъпни цени.',
+          d2: '100% оригинални продукти и чисти хранителни добавки. Преглед, тест и 14 дни връщане!',
+          sitelinks: ['Маратонки и Бягане', 'Старт Пакети (-10%)', 'Витамини и Протеини', 'СМ Калкулатор Размери'],
+          promo: 'Промоция: 10% отстъпка за първа поръчка с код WELCOME10'
+        },
+        copy: `Headline 1 (DKI): {KeyWord:Качествена Спортна Екипировка}\nHeadline 2: 10 Спорта + Витамини и Добавки | ActiveZone\nHeadline 3: Доставка със Спиди/Еконт · Безплатна над €50\nDescription 1: Открий надеждна екипировка за 10 спорта, протеини, витамини и минерали на достъпни цени.\nDescription 2: 100% оригинални продукти и чисти хранителни добавки. Преглед, тест и 14 дни връщане!`,
+        aiPrompt: `Текстова RSA реклама в Google Ads (без нужда от графичен промпт). Активирани 4 Sitelinks, 4 Callouts, Structured Snippets (10 категории) и Promotion Asset (-10%).`,
+        steps: `0 мин копи (готови RSA заглавия) · 5 мин проверка на 5-те рекламни групи (Brand, Бягане/Планина, Фитнес/Йога/Бокс, Футбол/Корт/Вода, Добавки) · 5 мин задаване на Max CPC €0.75 и негативни думи.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=google&utm_medium=cpc&utm_campaign=az_search_core_bg\nЦелеви KPI: Max CPC ≤ €0.75 · Quality Score ≥ 5/10 · ROAS ≥ 3.0x.`
+      },
+      {
+        id: 'oct-1-brevo',
+        day: 1,
+        dateLabel: 'Четвъртък, 1 Октомври 2026',
+        time: '11:00',
+        week: 1,
+        channel: 'brevo_email',
+        channelName: 'Brevo Имейл Автоматизация',
+        format: 'email',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (10 мин)',
+        pillar: 'Trust & Buy · Lifecycle Flows 1–3',
+        dept: 'Омниканална Автоматизация',
+        title: 'Активиране на Brevo Поп-ъп + Автоматични Потоци 1, 2 и 3',
+        emailPreview: {
+          subject: 'Добре дошъл в ActiveZone! Ето твоя PDF Наръчник + 10% код (WELCOME10) 🎁',
+          preview: 'Плюс персонализирани препоръки за твоя любим спорт и безплатна доставка над €50.',
+          cta: 'Използвай своя -10% код (WELCOME10)'
+        },
+        copy: `Тема (Имейл 1 - Веднага): Добре дошъл в ActiveZone! Ето твоя PDF Наръчник + 10% код (WELCOME10) 🎁\nТема (Имейл 2 след 72ч): Спри да тренираш с неудобни дрехи!\n\nТяло на имейла:\n„Дрехите не трябва да пречат на тренировката ти. Подбрахме спортни екипи, обувки и чисти хранителни добавки за възстановяване, които осигуряват комфорт и свобода – така, както ти заслужаваш. Използвай код WELCOME10 за -10% отстъпка и вземи безплатна доставка до Спиди и Еконт над €50!“`,
+        aiPrompt: `Clean e-commerce email header banner in Deep Navy #0D3B66 with 3D ebook cover 'Наръчник за ефективни тренировки и превенция на контузии' and Vibrant Orange #F95738 '-10% WELCOME10' badge.`,
+        steps: `0 мин копи · 5 мин свързване на GA4 събитието generate_lead с Brevo полето „Предпочитан спорт“ · 5 мин тест на Flow 1 (Welcome), Flow 2 (4ч Количка) и Flow 3 (+3д Доставка / +25д Добавки).`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=brevo&utm_medium=email&utm_campaign=flow1_welcome\nЦелеви KPI: Open Rate > 35% · CTR > 3.5% · 300+ абонати за 4 седмици.`
+      },
+      {
+        id: 'oct-2-reel',
+        day: 2,
+        dateLabel: 'Петък, 2 Октомври 2026',
+        time: '13:00',
+        week: 1,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (Reel / Карусел)',
+        format: 'reel',
+        template: 'M2: AZ-Reel-15s-4Cut (12 мин)',
+        pillar: 'Pillar 2 · Продукти и Решения (Sage 30%)',
+        dept: 'Бягане, Футбол и Ставна грижа',
+        title: 'Двоен Спотлайт: „Бягай смело напред“ & „Оборудвай се за победа“',
+        slides: [
+          { tag: 'КАДЪР 1 · [0–3 сек]', head: 'Асфалт или Футболен терен?', body: 'Разделен екран: сутрешен бегач в парка vs. футболист под прожекторите.' },
+          { tag: 'КАДЪР 2 · [3–7 сек]', head: 'За Бегачи: AeroStride Маратонки', body: 'Дишаща мрежа, омекотяваща подметка + СМ калкулатор с +0.5 см спортен резерв.' },
+          { tag: 'КАДЪР 3 · [7–11 сек]', head: 'За Футболисти: Контрол и Сцепление', body: 'Бутонки и стоножки за изкуствен терен + дишащи футболни екипи.' },
+          { tag: 'КАДЪР 4 · [11–15 сек]', head: 'Възстановяване след мач и крос', body: 'Хидролизиран Колаген + Магнезий за здрави стави. Безплатна доставка над €50!' }
+        ],
+        copy: `Независимо дали твоят ритъм е на асфалта сутрин или под прожекторите на футболния терен вечер — правилната обувка пази ставите ти и ти дава контрол. 🏃⚽\n\n✅ За бегачи: AeroStride маратонки с дишаща мрежа + СМ калкулатор с +0.5 см спортен резерв.\n✅ За футболисти: Бутонки за изкуствен и естествен терен с подсилен грайфер.\n✅ След тренировка: Хидролизиран колаген + Магнезий за стави и мускули.\n\nКой е твоят терен този уикенд — парка или игрището? Напиши в коментар! 👇\n\n#ActiveZone #ActiveZoneGear #СпортнаЕкипировка #FitnessBulgaria`,
+        aiPrompt: `Split screen 9:16 vertical sports showcase: top half urban runner in navy/orange cushioned running shoes on morning asphalt; bottom half football player in turf boots controlling a ball under floodlights, crisp commercial lighting.`,
+        steps: `0 мин копи · 3 мин AI визия за разделен екран (бягане + футбол) · 7 мин шаблон M2 с бадж „Безплатна замяна на размер“ · 2 мин планиране.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w1_run_football\nЦелеви KPI: Кликвания към категории Бягане и Футбол + коментари за предпочитан терен.`
+      },
+      {
+        id: 'oct-4-story',
+        day: 4,
+        dateLabel: 'Неделя, 4 Октомври 2026',
+        time: '19:00',
+        week: 1,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (IG/FB Story)',
+        format: 'story',
+        template: 'M3: AZ-Story-Sticker (6 мин)',
+        pillar: 'Pillar 3 · Общност и Ангажиране (25%)',
+        dept: 'Сегментиране по спорт',
+        title: 'Неделна Стори Анкета: „Какъв спорт тренираш тази седмица?“',
+        storyPoll: {
+          question: 'Новата седмица започва утре! Какъв спорт планираш да тренираш тази седмица?',
+          options: ['А) Бягане / Планина 🏃', 'Б) Фитнес / Йога 💪', 'В) Футбол / Тенис / Колело ⚽']
+        },
+        copy: `Стори Рамка 1: „Новата седмица започва утре! Какъв спорт планираш да тренираш тази седмица?“\nАнкета (Poll Sticker):\n• А) Бягане / Планина\n• Б) Фитнес / Йога\n• В) Футбол / Тенис / Колело\n\nСтори Рамка 2: „Утре в 08:00 ч. пускаме 5-те най-важни стъпки за плавен старт без контузии и прегаряне! Гласувай горе 👇“`,
+        aiPrompt: `Minimal 9:16 Instagram Story background in Deep Navy #0D3B66 with subtle geometric sport icons and clean center space for native Poll sticker.`,
+        steps: `0 мин копи · 3 мин дублиране на Canva шаблон M3 · 3 мин добавяне на нативен Poll стикер в Instagram.`,
+        utm: `Вътрешно ангажиране в IG Stories · Целеви KPI: 50+ гласа в анкетата за сегментиране на аудиторията.`
+      },
+      {
+        id: 'oct-5-carousel',
+        day: 5,
+        dateLabel: 'Понеделник, 5 Октомври 2026',
+        time: '08:00',
+        week: 2,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (7-Слайд Карусел)',
+        format: 'carousel',
+        template: 'M1: AZ-Carousel-5/7 (12 мин)',
+        pillar: 'Pillar 1 · Мотивация и Навици (40%)',
+        dept: 'Начинаещи + Възстановяване',
+        title: 'Флагмански Карусел: „Как да започнеш да тренираш, ако си напълно начинаещ – 5 лесни стъпки“',
+        slides: [
+          { tag: 'СЛАЙД 1 · КОРИЦА', head: '5 лесни стъпки за плавен старт без прегаряне', body: 'Как да започнеш да тренираш уверено, дори ако си напълно начинаещ → Плъзни наляво' },
+          { tag: 'СЛАЙД 2 · СТЪПКА 1', head: '1. Започни тренировките постепенно', body: '2–3 сесии седмично по 20–30 минути са напълно достатъчни в началото, за да изградиш навик.' },
+          { tag: 'СЛАЙД 3 · СТЪПКА 2', head: '2. Загрявай и се разтягай правилно', body: '5 минути динамична загрявка подготвят ставите и намаляват риска от контузия.' },
+          { tag: 'СЛАЙД 4 · СТЪПКА 3', head: '3. Остани мотивиран чрез малки победи', body: 'Следи всяка завършена тренировка, а не само крайната цел в огледалото.' },
+          { tag: 'СЛАЙД 5 · СТЪПКА 4', head: '4. Хидратирай се и подкрепи тялото', body: 'Енергията и възстановяването започват с чиста храна, електролити и магнезий вечер.' },
+          { tag: 'СЛАЙД 6 · СТЪПКА 5', head: '5. Избери правилната екипировка и обувки', body: 'Удобната екипировка и обувките с правилно омекотяване пазят коленете и глезените.' },
+          { tag: 'СЛАЙД 7 · CTA БАР', head: 'Запази този пост за следващата си тренировка!', body: 'Сподели с приятел, който все отлага старта, и вземи -10% с код WELCOME10 на activezone.bg' }
+        ],
+        copy: `Нов си в тренировките и не знаеш откъде да започнеш? Избягвай често срещаните грешки, които могат да те забавят. Опитай тези 5 съвета за напълно начинаещи – те ще улеснят старта на твоето приключение! 💪\n\nЗапази този пост за следващата си тренировка и го сподели с приятел!\n\n#ActiveZone #StayMotivated #HealthyHabits #BeActiveEveryday`,
+        aiPrompt: `Create a clean and motivating infographic-style image showing 5 beginner sports tips. Include simple icons for: gentle stretching, a stopwatch, a water bottle with vitamins, a healthy meal, and sports shoes. Deep Navy #0D3B66, Vibrant Orange #F95738, Aqua Cyan #2EC4B6.`,
+        steps: `0 мин копи · 3 мин генериране на 5 икони със Sora · 7 мин подреждане в 7-слайдов шаблон M1 · 2 мин A/B тест на Заглавие А срещу Заглавие Б.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w2_beginner_5steps\nЦелеви KPI: Save Rate ≥ 3.5% · Споделяния и плъзгания до Слайд 7.`
+      },
+      {
+        id: 'oct-6-story',
+        day: 6,
+        dateLabel: 'Вторник, 6 Октомври 2026',
+        time: '12:30',
+        week: 2,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (2x IG Stories)',
+        format: 'story',
+        template: 'M3: AZ-Story-Sticker (6 мин)',
+        pillar: 'Pillar 3 · Общност и Ангажиране (25%)',
+        dept: 'Обратна връзка от аудиторията',
+        title: 'Стори Серия: „Какво те спира да започнеш?“ + „Must-Have в чантата ти?“',
+        storyPoll: {
+          question: 'Какво те спира най-много да започнеш да тренираш редовно?',
+          options: ['А) Липса на време ⏳', 'Б) Липса на мотивация 🔋', 'В) Не знам откъде да започна 🧭']
+        },
+        copy: `Рамка 1 (Poll Sticker): „Какво те спира най-много да започнеш да тренираш?“\n• А) Липса на време\n• Б) Липса на мотивация\n• В) Не знам откъде да започна\n\nРамка 2 (Question Box): „Какво е must-have в твоята спортна чанта (екипировка или добавки)? Отговори в стикера с въпроси!“`,
+        aiPrompt: `9:16 Story frame in Deep Navy #0D3B66 with Aqua Cyan #2EC4B6 header bar and clean center space for Instagram Poll and Question Box stickers.`,
+        steps: `0 мин копи · 3 мин шаблон M3 · 3 мин публикуване на 2 сторита с Poll и Question стикери.`,
+        utm: `Вътрешно ангажиране в IG Stories · Отговорите се използват за поста в сряда (Спортната чанта).`
+      },
+      {
+        id: 'oct-7-carousel',
+        day: 7,
+        dateLabel: 'Сряда, 7 Октомври 2026',
+        time: '18:30',
+        week: 2,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (6-Слайд Карусел)',
+        format: 'carousel',
+        template: 'M1: AZ-Carousel-5/7 (12 мин)',
+        pillar: 'Pillar 2 · Продукти и Добавки (Sage 30%)',
+        dept: 'Фитнес у дома, Колоездене и Електролити',
+        title: 'Чеклист Карусел: „5 аксесоара за фитнес у дома + Чантата на колоездача“',
+        slides: [
+          { tag: 'СЛАЙД 1 · КОРИЦА', head: 'Какво има в спортната чанта за фитнес у дома и колело?', body: 'Практичен чеклист от треньора за максимален ефект без излишни уреди →' },
+          { tag: 'СЛАЙД 2 · ФИТНЕС У ДОМА', head: '1. Комплект тренировъчни ластици (5 нива)', body: 'Заменят цял скрипец за силова тренировка и мобилност навсякъде.' },
+          { tag: 'СЛАЙД 3 · СТАБИЛНОСТ', head: '2. Неплъзгаща постелка (6 мм) + Въже за скачане', body: 'Пази коленете и китките при планк, йога и интензивно кардио.' },
+          { tag: 'СЛАЙД 4 · КОЛОЕЗДЕНЕ', head: '3. За колоездача: Гел ръкавици, LED светлини и ветровка', body: 'Сигурност на пътя и комфорт при есенни сутрешни карания.' },
+          { tag: 'СЛАЙД 5 · ВЪЗСТАНОВЯВАНЕ', head: '4. Шейкър с HydroBoost Електролити + Суроватъчен Протеин', body: 'Мигновена хидратация по време на движение и 24g чист протеин след тренировка.' },
+          { tag: 'СЛАЙД 6 · СТАРТ ПАКЕТ', head: 'Вземи готов Старт Пакет с -10% отстъпка!', body: 'Автоматично отключва БЕЗПЛАТНА доставка над €50 до Спиди и Еконт с Преглед и Тест.' }
+        ],
+        copy: `Нямаш нужда от цяла фитнес зала, за да влезеш във форма. 🏋️‍♂️🚴\n\nВиж 5-те практични аксесоара за домашна тренировка и колоездене, които се побират в една раница — плюс точните добавки за хидратация и възстановяване.\n\nЗапази списъка и разгледай готовите ни Старт Пакети с -10% отстъпка на activezone.bg! 🛒\n\n#ActiveZone #ActiveZoneGear #СпортнаЕкипировка #HealthyHabits`,
+        aiPrompt: `Top-down flat-lay knolling photography of a sports bag on #F4F6F8 light gray surface: resistance bands, rolled navy yoga mat, cycling gel gloves, bike LED light, electrolyte bottle, and whey protein pouch.`,
+        steps: `0 мин копи · 3 мин flat-lay визия с Gemini · 7 мин подреждане в шаблон M1 · 2 мин линк към Старт Пакети.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#starter-bundles-section?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w2_bag_checklist\nЦелеви KPI: Запазвания на чеклиста + трафик към Старт Пакетите (-10%).`
+      },
+      {
+        id: 'oct-8-brevo',
+        day: 8,
+        dateLabel: 'Четвъртък, 8 Октомври 2026',
+        time: '10:00',
+        week: 2,
+        channel: 'brevo_email',
+        channelName: 'Brevo Кампания #1 (Бюлетин)',
+        format: 'email',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (10 мин)',
+        pillar: 'Trust & Buy · Имейл Маркетинг',
+        dept: 'Старт Пакети (-10%) + Добавки',
+        title: 'Brevo Имейл #1: „Твоят 5-стъпков план за старт без контузии (+ Старт Пакети -10%)“',
+        emailPreview: {
+          subject: 'Спри да отлагаш старта — виж 5-те правила за тренировка без прегаряне 🏃',
+          preview: 'Плюс готови Старт Пакети с -10% отстъпка и безплатна доставка над €50 до Спиди и Еконт.',
+          cta: 'Разгледай Старт Пакетите (-10%)'
+        },
+        copy: `Тема: Спри да отлагаш старта — виж 5-те правила за тренировка без прегаряне 🏃\nПревю: Плюс готови Старт Пакети с -10% отстъпка и безплатна доставка над €50.\n\nЗдравей,\nПрез тази седмица ти показахме 5-те стъпки за плавен старт в спорта. За да ти спестим лутането по рафтовете, нашите треньори сглобиха 4 готови Старт Пакета (екипировка + възстановяване) с -10% отстъпка, които автоматично ти носят БЕЗПЛАТНА доставка над €50 до Спиди и Еконт!\n\n[ Разгледай Старт Пакетите (-10%) ]`,
+        aiPrompt: `Reuse Monday's 5-step beginner graphic header + dynamic 3-column product block from Brevo template M4.`,
+        steps: `0 мин копи · 5 мин избиране на сегмент „Всички абонати по Предпочитан спорт“ в Brevo · 5 мин тест и планиране за 10:00 ч.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#starter-bundles-section?utm_source=brevo&utm_medium=email&utm_campaign=oct_w2_starter_bundles\nЦелеви KPI: Open Rate > 35% · Първи поръчки на Старт Пакети.`
+      },
+      {
+        id: 'oct-9-carousel',
+        day: 9,
+        dateLabel: 'Петък, 9 Октомври 2026',
+        time: '13:00',
+        week: 2,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (3-Слайд Инфографика)',
+        format: 'carousel',
+        template: 'M1: AZ-Carousel-5/7 (11 мин)',
+        pillar: 'Pillar 2 · Хранителни Добавки (Sage 30%)',
+        dept: 'Спортно Хранене и Възстановяване',
+        title: 'Хидратация и Възстановяване: „Протеин, магнезий и електролити — кога и защо?“',
+        slides: [
+          { tag: 'СЛАЙД 1 · НАУКА ЗА ВСЕКИ', head: 'Протеин, Магнезий и Електролити: Кога и защо ти трябват?', body: 'Чиста формула и точен дневен прием за по-бързо възстановяване без мускулна треска →' },
+          { tag: 'СЛАЙД 2 · ТОЧЕН ТАЙМИНГ', head: 'Преди, По време и След Тренировка', body: '• ПО ВРЕМЕ: HydroBoost Електролити (€12)\n• ДО 30 МИН СЛЕД: 100% Суроватъчен Протеин (24g)\n• ВЕЧЕР ПРЕДИ СЪН: Магнезий Цитрат + Бисглицинат (€12)' },
+          { tag: 'СЛАЙД 3 · УМЕН КРОС-СЕЛ', head: 'Отключи БЕЗПЛАТНА доставка над €50!', body: 'Добави Магнезий или Електролити (€12) към своята количка за екипировка и спести доставката до Спиди и Еконт.' }
+        ],
+        copy: `Възстановяването не е сложно, когато знаеш кога какво да дадеш на тялото си. 💪\n\n🔹 По време на тренировка: HydroBoost Електролити срещу умора.\n🔹 До 30 мин след тренировка: Суроватъчен протеин за мускулен тонус.\n🔹 Вечер преди сън: Магнезий Цитрат + Бисглицинат срещу крампи и за дълбок сън.\n\n💡 Съвет: Добави Магнезий или Електролити (€12) към количката си и отключи БЕЗПЛАТНА доставка над €50! Коя добавка вече присъства в твоя режим? 👇\n\n#ActiveZone #ActiveZoneGear #HealthyHabits #FitnessBulgaria`,
+        aiPrompt: `Clean studio product render of three sports supplement containers in Deep Navy #0D3B66, Vibrant Orange #F95738 and Aqua Cyan #2EC4B6: Whey Protein tub, Magnesium capsules bottle, and Electrolyte effervescent tube.`,
+        steps: `0 мин копи · 3 мин продуктова визия с Gemini · 6 мин шаблон M1 с печат „Чиста формула“ · 2 мин планиране.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#catalog-section?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w2_nutrition_triad\nЦелеви KPI: Повишаване на средната стойност на количката (AOV > €50).`
+      },
+      {
+        id: 'oct-11-story',
+        day: 11,
+        dateLabel: 'Неделя, 11 Октомври 2026',
+        time: '19:00',
+        week: 2,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (IG/FB Story)',
+        format: 'story',
+        template: 'M3: AZ-Story-Sticker (6 мин)',
+        pillar: 'Pillar 3 · Общност и Ангажиране (25%)',
+        dept: 'Подгряване за #ActiveZoneStart',
+        title: 'Стори Анкета: „Твоят стил тренировка: СИЛА или КАРДИО?“ (+ Тийзър за Предизвикателството)',
+        storyPoll: {
+          question: 'Неделна анкета за отбора: Кой е твоят стил тренировка тази седмица?',
+          options: ['💪 СИЛА (Фитнес / Кросфит / Бокс)', '🏃 КАРДИО (Бягане / Планина / Колело)']
+        },
+        copy: `Рамка 1 (Poll): „Твоят стил тренировка: СИЛА или КАРДИО?“\nРамка 2: „Утре сутрин в 08:00 ч. стартираме 7-дневното предизвикателство #ActiveZoneStart с гарантирани ваучери и награда Старт Пакет! Готов ли си за 10 минути движение?“`,
+        aiPrompt: `9:16 Story graphic splitting Strength (dumbbell icon in Orange #F95738) vs Cardio (runner icon in Cyan #2EC4B6) on Deep Navy #0D3B66 background.`,
+        steps: `0 мин копи · 3 мин шаблон M3 · 3 мин нативен Poll стикер.`,
+        utm: `Подгряване на алгоритъма в Stories преди старта на Седмица 3 (#ActiveZoneStart).`
+      },
+      {
+        id: 'oct-12-reel',
+        day: 12,
+        dateLabel: 'Понеделник, 12 Октомври 2026',
+        time: '08:00',
+        week: 3,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (Reel + Предизвикателство)',
+        format: 'reel',
+        template: 'M2: AZ-Reel-15s-4Cut (14 мин)',
+        pillar: 'Pillar 1 & 3 · Старт на #ActiveZoneStart',
+        dept: 'Всички 10 спорта (7-Дневно Предизвикателство)',
+        title: 'Reel: „10 минутна сутрешна тренировка за енергия“ + Старт на #ActiveZoneStart',
+        slides: [
+          { tag: 'HOOK · [0–2 сек]', head: '„10 минутна сутрешна тренировка за енергия“', body: 'Енергичен старт у дома — 5 упражнения със собствено тегло × 1 минута (2 кръга).' },
+          { tag: 'УПР. 1–3 · [2–8 сек]', head: 'Jumping Jacks → Клякания → Лицеви опори', body: 'По 1 минута всяко упражнение с таймер на екрана.' },
+          { tag: 'УПР. 4–5 · [8–12 сек]', head: 'Планк (1 мин) → Високо коляно (1 мин)', body: '30 секунди почивка и втори кръг за пълен тонус през деня.' },
+          { tag: 'CTA · [12–15 сек]', head: 'Включи се в #ActiveZoneStart днес!', body: 'Заснеми 10 сек движение → Тагни @activezonebg + #ActiveZoneStart → Вземи -10% ваучер + шанс за Старт Пакет!' }
+        ],
+        copy: `Нямаш време за тренировка? ⏳ Само 10 минути движение сутрин могат да ти дадат повече енергия за целия ден!\n\n🔥 ДНЕС СТАРТИРА 7-ДНЕВНОТО ПРЕДИЗВИКАТЕЛСТВО #ActiveZoneStart:\n1️⃣ Заснеми 10 секунди от своята тренировка, бягане, мач или разходка.\n2️⃣ Качи в Story или Reel и отбележи @activezonebg + #ActiveZoneStart.\n3️⃣ Всеки участник получава гарантиран 10% ваучер, а в неделя теглим пълен Старт Пакет + Магнезий и Електролити! 💪\n\nЗапази видеото и го използвай като бърза сутрешна тренировка!\n\n#ActiveZone #ActiveZoneStart #ActiveZoneLife #StayMotivated`,
+        aiPrompt: `9:16 vertical home workout video montage: fit everyday person in navy/orange training wear doing jumping jacks, bodyweight squats, push-ups, plank, and high knees in a bright modern apartment, clean timer overlay.`,
+        steps: `0 мин копи · 4 мин 5-кадров монтаж в шаблон M2 · 8 мин добавяне на екранни таймери „1 минута“ · 2 мин пинване на поста най-горе в профила.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#starter-bundles-section?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w3_challenge_kickoff\nЦелеви KPI: 15+ автентични UGC видеа от последователи · Висок процент запазвания.`
+      },
+      {
+        id: 'oct-13-brevo-story',
+        day: 13,
+        dateLabel: 'Вторник, 13 Октомври 2026',
+        time: '10:00',
+        week: 3,
+        channel: 'brevo_email',
+        channelName: 'Brevo Кампания #2 + IG Story',
+        format: 'email',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (10 мин)',
+        pillar: 'Pillar 3 · Активиране на Общността',
+        dept: 'Предизвикателство #ActiveZoneStart',
+        title: 'Brevo Имейл #2 + Стори: „Включи се в #ActiveZoneStart — само 10 минути движение днес!“',
+        emailPreview: {
+          subject: 'Предизвикваме те: 10 минути движение днес = Гарантирана награда 🎯',
+          preview: 'Включи се в 7-дневното приключение #ActiveZoneStart и спечели Старт Пакет от ActiveZone.',
+          cta: 'Виж правилата и Старт Пакетите'
+        },
+        copy: `Тема: Предизвикваме те: 10 минути движение днес = Гарантирана награда 🎯\n\nЗдравей,\nНе е нужно да тренираш по 2 часа на ден, за да бъдеш част от отбора. Тази седмица те предизвикваме с #ActiveZoneStart: сподели 10 секунди от своята тренировка в Instagram Story, тагни @activezonebg и грабни гарантиран ваучер + участие в томболата за пълен Старт Пакет (екипировка + магнезий и електролити)!`,
+        aiPrompt: `Energetic email banner showing #ActiveZoneStart challenge badge, 10-minute stopwatch icon, and Starter Bundle prize pack on #0D3B66 Navy background.`,
+        steps: `0 мин копи · 5 мин сглобяване в Brevo шаблон M4 · 5 мин репостване на първите участници в IG Stories.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=brevo&utm_medium=email&utm_campaign=oct_w3_challenge_invite\nЦелеви KPI: Увеличаване на UGC таговете в Instagram с +30%.`
+      },
+      {
+        id: 'oct-14-carousel',
+        day: 14,
+        dateLabel: 'Сряда, 14 Октомври 2026',
+        time: '18:30',
+        week: 3,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (5-Слайд Карусел)',
+        format: 'carousel',
+        template: 'M1: AZ-Carousel-5/7 (12 мин)',
+        pillar: 'Pillar 2 · Продукти и Решения (Sage 30%)',
+        dept: 'Планина, Туризъм и Трейл',
+        title: 'Outdoor Карусел: „Пътят те зове – обувки, раници и аксесоари за приключения“',
+        slides: [
+          { tag: 'СЛАЙД 1 · КОРИЦА', head: 'Пътят те зове: Есенна планина с пълна сигурност', body: 'Обувки, раници и хидратация за Витоша, Рила и Стара планина →' },
+          { tag: 'СЛАЙД 2 · ОБУВКИ С ГРАЙФЕР', head: '1. Водоотблъскващи трейл и туристически обувки', body: 'Дълбок грайфер за мокър камък и кал + СМ калкулатор с +0.5 см резерв при слизане.' },
+          { tag: 'СЛАЙД 3 · РАНИЦА 25L', head: '2. Ергономична туристическа раница (25L)', body: 'Вентилиран гръб, гръден колан и джоб за термо бутилка.' },
+          { tag: 'СЛАЙД 4 · ЗАЩИТА ЗА КОЛЕНЕТЕ', head: '3. Телескопични щеки + Хидролизиран Колаген', body: 'Щеките свалят до 25% от тежестта върху коленете при стръмно слизане.' },
+          { tag: 'СЛАЙД 5 · БЕЗПЛАТНА ДОСТАВКА', head: 'Екипирай се за уикенда с Преглед и Тест!', body: 'Доставка за 24–48 ч. до Спиди и Еконт + Безплатна замяна на размер.' }
+        ],
+        copy: `Есента е най-красивият сезон за Витоша, Рила и Стара планина — стига краката ти да са сухи и стабилни. 🏔️🥾\n\nРазгледай нашата селекция за планина и туризъм: водоотблъскващи обувки, 25L ергономични раници, телескопични щеки и електролити за прехода.\n\nКой е любимият ти планински маршрут в България? Напиши ни в коментар! 👇\n\n#ActiveZone #ActiveZoneGear #СпортнаЕкипировка #BeActiveEveryday`,
+        aiPrompt: `Golden hour autumn mountain trail in Bulgaria, hiker wearing deep navy and orange waterproof trail shoes with trekking poles and ergonomic 25L backpack, sharp commercial outdoor photography.`,
+        steps: `0 мин копи · 3 мин AI визия за планина · 7 мин шаблон M1 · 2 мин планиране.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#catalog-section?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w3_outdoor_trail\nЦелеви KPI: Трафик към отдел „Планина, Туризъм и Издръжливост“.`
+      },
+      {
+        id: 'oct-14-google-audit',
+        day: 14,
+        dateLabel: 'Сряда, 14 Октомври 2026',
+        time: '19:00',
+        week: 3,
+        channel: 'google_ads',
+        channelName: 'Google Search Оптимизация',
+        format: 'ad_google',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (10 мин)',
+        pillar: 'Paid Search · Управление на Качеството',
+        dept: 'AG2 (Бягане/Планина) & AG5 (Добавки)',
+        title: 'Двуседмичен Одит на AZ_Search_Core_BG: Пауза на KWs с QS < 5 и Search Terms преглед',
+        serpPreview: {
+          url: 'https://activezone.bg › туристически-обувки-и-раници',
+          h1: 'Туристически Обувки и Раници',
+          h2: '10 Спорта + Витамини и Добавки | ActiveZone',
+          h3: 'Доставка със Спиди/Еконт · Безплатна над €50',
+          d1: 'Водоотблъскващи обувки за планина, 25L раници и електролити. СМ калкулатор за точен размер.',
+          d2: 'Преглед, тест и безплатна замяна на размер чрез Спиди и Еконт. Поръчай онлайн днес!',
+          sitelinks: ['Планина и Туризъм', 'СМ Калкулатор (+0.5 см)', 'Електролити HydroBoost', 'Старт Пакети (-10%)'],
+          promo: 'Правило за управление: Автоматична пауза на ключови думи с Quality Score < 5/10'
+        },
+        copy: `Оперативен чеклист (Google Ads Advanced):\n1. Филтрирай всички ключови думи в AG1–AG5 по Quality Score.\n2. Паузирай всяка дума с QS < 5/10.\n3. Прегледай Search Terms репорта и добави нови негативни думи към списъка (реплики, втора ръка, олх, ремонт).\n4. Провери Max CPC тавана (≤ €0.75).`,
+        aiPrompt: `Оперативна задача в Google Ads — не изисква нова графика.`,
+        steps: `10 мин преглед на Search Terms и Quality Score в Google Ads интерфейса.`,
+        utm: `Кампания: AZ_Search_Core_BG · Поддържане на среден Quality Score ≥ 6/10 и CPC ≤ €0.75.`
+      },
+      {
+        id: 'oct-16-ugc-reel',
+        day: 16,
+        dateLabel: 'Петък, 16 Октомври 2026',
+        time: '13:00',
+        week: 3,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (UGC Reel)',
+        format: 'reel',
+        template: 'M2: AZ-Reel-15s-4Cut (12 мин)',
+        pillar: 'Pillar 3 · Общност и Социално Доказателство (25%)',
+        dept: 'UGC от #ActiveZoneStart',
+        title: 'UGC Компилация: „Вашите моменти от #ActiveZoneStart — Хора вярват на хора“',
+        slides: [
+          { tag: 'КАДЪР 1 · [0–3 сек]', head: 'Реални хора. Реални тренировки.', body: 'Бърз колаж от сторитата на участниците в #ActiveZoneStart.' },
+          { tag: 'КАДЪР 2 · [3–9 сек]', head: 'Бягане, Фитнес у дома, Футбол и Планина', body: '4 реални 2-секундни клипа с тагове на участниците.' },
+          { tag: 'КАДЪР 3 · [9–12 сек]', head: 'Остават 48 часа до жребия!', body: 'Показване на наградата: Старт Пакет за Начинаещи + Магнезий и Електролити.' },
+          { tag: 'КАДЪР 4 · [12–15 сек]', head: 'Тагни @activezonebg + #ActiveZoneStart', body: 'Включи се до неделя вечер!' }
+        ],
+        copy: `Най-силната мотивация не идва от рекламите, а от хората до теб! 🙌\n\nВиж как нашата общност се движи тази седмица в предизвикателството #ActiveZoneStart — от сутрешен крос в парка до домашни тренировки и футбол с приятели.\n\n⏳ Имаш още 48 часа да качиш своето 10-секундно стори с @activezonebg + #ActiveZoneStart, за да получиш гарантиран 10% ваучер и да влезеш в жребия за Старт Пакет в неделя! 💪\n\n#ActiveZone #ActiveZoneLife #ActiveZoneStart #FitnessBulgaria`,
+        aiPrompt: `Authentic smartphone-style vertical montage of 4 young Bulgarian amateur athletes filming 10-second clips in a park, living room gym, football pitch, and mountain trail.`,
+        steps: `0 мин копи · 4 мин изтегляне на 4 тагнати потребителски сторита · 6 мин сглобяване в шаблон M2 · 2 мин тагване на участниците.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w3_ugc_roundup\nЦелеви KPI: Събиране на одобрени UGC клипове за BOF ретаргетинг рекламите.`
+      },
+      {
+        id: 'oct-18-story',
+        day: 18,
+        dateLabel: 'Неделя, 18 Октомври 2026',
+        time: '19:00',
+        week: 3,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (3x IG Stories)',
+        format: 'story',
+        template: 'M3: AZ-Story-Sticker (6 мин)',
+        pillar: 'Pillar 3 · Финал на Предизвикателството',
+        dept: 'Всички 10 спорта',
+        title: 'Финал на #ActiveZoneStart + Неделна Анкета: „Къде беше твоята тренировка този уикенд?“',
+        storyPoll: {
+          question: 'Къде беше твоята тренировка този уикенд?',
+          options: ['А) Асфалт / Градски парк 🏃', 'Б) Планинска пътека 🏔️', 'В) Зала, Терен или Корт ⚽🎾']
+        },
+        copy: `Рамка 1: „Благодарим на всички 45+ участници в #ActiveZoneStart! Всеки от вас вече има 10% ваучер в DM!“\nРамка 2: Обявяване на печелившия на Старт Пакета.\nРамка 3 (Poll Sticker): „Асфалт, планинска пътека, терен или корт – къде беше твоята тренировка този уикенд?“`,
+        aiPrompt: `Celebratory 9:16 Story frame in Deep Navy #0D3B66 with Vibrant Orange #F95738 winner badge and Poll sticker zone.`,
+        steps: `0 мин копи · 3 мин шаблон M3 · 3 мин изпращане на DM ваучери на участниците.`,
+        utm: `Вътрешно ангажиране в IG Stories · Преход към Седмица 4 (Конверсии и BOF).`
+      },
+      {
+        id: 'oct-19-carousel',
+        day: 19,
+        dateLabel: 'Понеделник, 19 Октомври 2026',
+        time: '08:00',
+        week: 4,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (6-Слайд Карусел)',
+        format: 'carousel',
+        template: 'M1: AZ-Carousel-5/7 (12 мин)',
+        pillar: 'Pillar 1 · Мотивация и Дисциплина (40%)',
+        dept: 'Йога, Бягане и Магнезий',
+        title: 'Карусел: „Тренировката като терапия – 5 причини да се движиш за ума, не само за тялото“',
+        slides: [
+          { tag: 'СЛАЙД 1 · КОРИЦА', head: 'Тренировката като терапия: 5 причини да се движиш за ума си', body: 'Защо 30 минути движение след работа са най-добрият рестарт за главата →' },
+          { tag: 'СЛАЙД 2 · ПО-МАЛКО СТРЕС', head: '1. Сваля нивата на кортизол след работния ден', body: 'Движението освобождава напрежението, натрупано пред екрана.' },
+          { tag: 'СЛАЙД 3 · ДЪЛБОК СЪН', head: '2. По-дълбок и качествен сън', body: 'Вечерна разходка, йога или крос + Магнезий Бисглицинат успокояват нервната система.' },
+          { tag: 'СЛАЙД 4 · ОСТЪР ФОКУС', head: '3. По-ясна концентрация на следващата сутрин', body: 'По-доброто кръвообращение носи повече енергия и фокус.' },
+          { tag: 'СЛАЙД 5 · МАЛКИ ПОБЕДИ', head: '4. Увереност от спазеното обещание към себе си', body: 'Дисциплината в спорта се пренася във всяка сфера на живота.' },
+          { tag: 'СЛАЙД 6 · ЗАПАЗИ ПОСТА', head: 'Запази за дните, в които умът ти има нужда от рестарт!', body: 'Движи се. Тренирай. Живей активно с @activezonebg' }
+        ],
+        copy: `Понякога най-добрата тренировка не е за калории или рекорди, а за чиста глава след дълъг работен ден. 🧘‍♂️🏃\n\nВиж 5 причини защо движението е най-добрата терапия за ума ти. Кой спорт ти помага най-много да изчистиш стреса след работа? Сподели в коментар! 👇\n\n#ActiveZone #StayMotivated #HealthyHabits #BeActiveEveryday`,
+        aiPrompt: `Peaceful evening runner and yoga practitioner overlooking Sofia city lights at dusk, Deep Navy #0D3B66 twilight sky with warm Vibrant Orange #F95738 horizon glow.`,
+        steps: `0 мин копи · 3 мин AI визия · 7 мин шаблон M1 · 2 мин планиране за понеделник 08:00 ч.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w4_therapy_mindset\nЦелеви KPI: Висок процент запазвания (Save Rate ≥ 3.5%) и коментари.`
+      },
+      {
+        id: 'oct-20-story',
+        day: 20,
+        dateLabel: 'Вторник, 20 Октомври 2026',
+        time: '12:30',
+        week: 4,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (3x Стори Съветник)',
+        format: 'story',
+        template: 'M3: AZ-Story-Sticker (6 мин)',
+        pillar: 'Pillar 2 & 3 · Намаляване на колебанието (CRO)',
+        dept: 'СМ Калкулатор за Обувки + Треньорски Съвет',
+        title: 'Стори Серия: „Как да избереш точен размер маратонки (+0.5 см резерв) и добавки онлайн?“',
+        storyPoll: {
+          question: 'Как избираш размер спортни обувки при поръчка онлайн?',
+          options: ['А) Измервам стъпалото в СМ (+0.5 см) 📏', 'Б) Поръчвам стандартния си EU номер 👟', 'В) Винаги се колебая между два номера 🤔']
+        },
+        copy: `Рамка 1 (Poll): „Как избираш размер спортни обувки при поръчка онлайн?“\nРамка 2: Демонстрация на интерактивния СМ Калкулатор в продуктовите карти на activezone.bg (+0.5 см спортен резерв) + Безплатна замяна на размер със Спиди и Еконт.\nРамка 3 (Question Box): „Колебаеш се коя екипировка или добавка е за теб? Питай треньора тук!“`,
+        aiPrompt: `9:16 Story graphic showing ActiveZone's CM Foot Size Calculator UI (+0.5 cm sports reserve) and 'Безплатна замяна на размер със Спиди и Еконт' trust seal.`,
+        steps: `0 мин копи · 3 мин скрийншот на СМ калкулатора от магазина в шаблон M3 · 3 мин линк стикер към магазина.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#catalog-section?utm_source=ig_story&utm_medium=organic_social&utm_campaign=phase1_w4_size_calc\nЦелеви KPI: Директни кликове към продуктовия каталог и намаляване на изоставените колички.`
+      },
+      {
+        id: 'oct-21-reel',
+        day: 21,
+        dateLabel: 'Сряда, 21 Октомври 2026',
+        time: '18:30',
+        week: 4,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (Reel 15s)',
+        format: 'reel',
+        template: 'M2: AZ-Reel-15s-4Cut (12 мин)',
+        pillar: 'Pillar 2 · Продукти и Добавки (Sage 30%)',
+        dept: 'Тенис, Падел, Бокс и Колаген за стави',
+        title: 'Корт и Ринг Спотлайт: „Експлозивност в Тениса, Падела и Бокса + Защита за Ставите“',
+        slides: [
+          { tag: 'КАДЪР 1 · [0–3 сек]', head: 'Корт или Боксов ринг?', body: 'Бързи смени на посоката на падел корт и работа на боксов чувал.' },
+          { tag: 'КАДЪР 2 · [3–7 сек]', head: 'Тенис и Падел: Карбонови ракети и грипове', body: 'Перфектен баланс между контрол и мощност за начинаещи и напреднали.' },
+          { tag: 'КАДЪР 3 · [7–11 сек]', head: 'Бойни спортове: Дишащи боксови ръкавици и бинтове', body: 'Многослойна гел пяна за защита на кокалчетата и китката.' },
+          { tag: 'КАДЪР 4 · [11–15 сек]', head: 'Грижа за ставите: Хидролизиран Колаген + Витамин C', body: 'За здрави сухожилия при резки спринтове и удари. Безплатна доставка над €50!' }
+        ],
+        copy: `Експлозивност на корта за падел и тенис или 12 рунда издръжливост с боксовите ръкавици? 🎾🥊\n\nВ отдел „Отборни, Корт и Бойни спортове“ на ActiveZone ще откриеш:\n✅ Леки ракети за падел и тенис с антивибрационна система.\n✅ Боксови ръкавици, бинтове и протектори за сигурен спаринг.\n✅ Хидролизиран Колаген + Витамин C за здрави стави и сухожилия при резки смени на посоката.\n\n🛒 Поръчай с Преглед и Тест и безплатна доставка над €50 до Спиди и Еконт!\n\n#ActiveZone #ActiveZoneGear #СпортнаЕкипировка #FitnessBulgaria`,
+        aiPrompt: `Dynamic 9:16 vertical sports video: padel player hitting an overhead smash on a blue court, cutting to a boxer wrapping hands and hitting heavy bag in navy/orange gloves, ending with Collagen + Vitamin C tub.`,
+        steps: `0 мин копи · 4 мин AI/сток клипове за падел и бокс · 6 мин шаблон M2 · 2 мин планиране.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#catalog-section?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w4_court_combat\nЦелеви KPI: Покриване на отдел „Отборни, Корт и Бойни спортове“.`
+      },
+      {
+        id: 'oct-21-meta-bof',
+        day: 21,
+        dateLabel: 'Сряда, 21 Октомври 2026',
+        time: '19:00',
+        week: 4,
+        channel: 'meta_ads',
+        channelName: 'Meta Paid Ads (BOF Sales CBO)',
+        format: 'ad_meta',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (12 мин)',
+        pillar: 'Paid BOF · Конверсии (€350/мес)',
+        dept: 'BOF-AS1 (Warm 30d) + BOF-AS2 (Cart 7–14d)',
+        title: 'Пълно активиране на AZ_BOF_Sales_Conversions_CBO (Ad Cards 1–3 + Dynamic Cart Card 4)',
+        adPreview: {
+          headline: 'Тичай, тренирай и играй с лекота — Нова екипировка от ActiveZone',
+          desc: 'Преглед и Тест със Спиди/Еконт · Безплатна доставка над €50 · -10% с код WELCOME10',
+          cta: 'Купи сега (Shop Now)',
+          badge: 'BOF-AS1 (Warm 30d) & BOF-AS2 (Cart Recovery)'
+        },
+        copy: `AD CARD 1 (Бягане и Планина - BOF-AS1):\nВреме е да усетиш свободата в краката си! 🏃💨 С дишащата екипировка и обувки от ActiveZone поддържаш своя ритъм без компромис в комфорта. Постигай целите си с лекота! 🛒 Купи сега\n\nAD CARD 2 (Фитнес и Йога - BOF-AS1):\nГотов ли си да влезеш във форма? 💪 Започни уверено с нашата селекция от фитнес ластици, постелки и аксесоари за 10 вида спорт. Поръчай днес с безплатна доставка над €50. 🛒 Shop Now\n\nAD CARD 4 (Изоставена Количка - BOF-AS2):\nВърни се и завърши своята тренировка! ⏳ Екипировката и хранителните добавки в количката ти те чакат. Довърши поръчката и вземи бърза доставка до Спиди и Еконт (безплатна над €50). 🛒 Купи Сега`,
+        aiPrompt: `4:5 and 1:1 Meta conversion ad cards with Deep Navy #0D3B66 badge, Vibrant Orange #F95738 CTA highlight, and 'Безплатна доставка над €50' trust bar.`,
+        steps: `0 мин копи (Ad Cards 1–4 от Страница 6 на стратегията) · 6 мин качване в BOF-AS1 и BOF-AS2 · 4 мин проверка на изключението Purchased < 30d.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=meta&utm_medium=paid_social&utm_campaign=bof_sales_cbo\nЦелеви KPI: Blended ROAS ≥ 3.0x · CPA ≤ €22 · Cart Recovery > 12%.`
+      },
+      {
+        id: 'oct-23-carousel',
+        day: 23,
+        dateLabel: 'Петък, 23 Октомври 2026',
+        time: '13:00',
+        week: 4,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (Карусел + IG Live)',
+        format: 'carousel',
+        template: 'M1: AZ-Carousel-5/7 (12 мин)',
+        pillar: 'Pillar 1 & 3 · Излизане от зоната на комфорт',
+        dept: 'Всички спортове + Креатин и Протеин',
+        title: 'Карусел: „Ти можеш повече, отколкото мислиш – 5 начина да излезеш от зоната на комфорт“ (+ 19:00 IG Live Q&A)',
+        slides: [
+          { tag: 'СЛАЙД 1 · КОРИЦА', head: 'Ти можеш повече, отколкото мислиш!', body: '5 начина да излезеш от зоната си на комфорт още тази седмица →' },
+          { tag: 'СЛАЙД 2 · НОВ СПОРТ', head: '1. Опитай спорт, който никога не си практикувал', body: 'Падел, бокс, плуване или планински преход — новите движения будят тялото.' },
+          { tag: 'СЛАЙД 3 · +5 МИНУТИ', head: '2. Добави само 5 минути или 1 повторение днес', body: 'Малкото надграждане всяка седмица прави огромна разлика след 3 месеца.' },
+          { tag: 'СЛАЙД 4 · ПАРТНЬОР', head: '3. Тренирай с приятел, който е една идея по-напреднал', body: 'Общността те дърпа напред, когато мотивацията ти спадне.' },
+          { tag: 'СЛАЙД 5 · ВЪЗСТАНОВЯВАНЕ', head: '4. Подкрепи силата си с чист Креатин и Протеин', body: 'Повече експлозивна енергия и по-бързо възстановяване между сесиите.' },
+          { tag: 'СЛАЙД 6 · ДОВЕЧЕРА В 19:00', head: 'Включи се в нашето LIVE Q&A довечера в 19:00 ч.!', body: 'Отговаряме на живо: Как да избереш правилната екипировка и добавки за твоя спорт.' }
+        ],
+        copy: `Прогресът започва точно там, където свършват оправданията. 💪\n\nВиж 5 начина да излезеш от зоната си на комфорт този месец — и не пропускай нашето включване НА ЖИВО довечера в 19:00 ч., където ще отговорим на всички ваши въпроси за избор на обувки, екипировка и хранителни добавки!\n\nКое е едното ново спортно предизвикателство, което искаш да опиташ до края на годината? 👇\n\n#ActiveZone #StayMotivated #ActiveZoneLife #FitnessBulgaria`,
+        aiPrompt: `High-contrast motivational sports carousel cover in Deep Navy #0D3B66 and Vibrant Orange #F95738 showing an athlete pushing through final rep with bold Montserrat typography.`,
+        steps: `0 мин копи · 3 мин корица със Sora · 7 мин шаблон M1 · 2 мин стикер с обратно броене за 19:00 IG Live.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w4_comfort_zone\nЦелеви KPI: Запазвания + зрители на вечерното Q&A.`
+      },
+      {
+        id: 'oct-24-google-cro',
+        day: 24,
+        dateLabel: 'Събота, 24 Октомври 2026',
+        time: '11:00',
+        week: 4,
+        channel: 'google_ads',
+        channelName: 'Google Search & Сайт CRO Синхрон',
+        format: 'ad_google',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (10 мин)',
+        pillar: 'Paid Search · Оптимизация на Конверсиите',
+        dept: 'AG5 (Добавки) & Старт Пакети Sitelinks',
+        title: 'Оптимизация на Sitelink Assets: Фокус върху Старт Пакети (-10%) и Чисти Добавки',
+        serpPreview: {
+          url: 'https://activezone.bg › хранителни-добавки-и-витамини',
+          h1: 'Чисти Хранителни Добавки',
+          h2: 'Протеин, Магнезий и Витамини | ActiveZone',
+          h3: 'Безплатна Доставка над €50 · Спиди и Еконт',
+          d1: 'Суроватъчен протеин, микронизиран креатин, магнезий бисглицинат, колаген и витамин D3+K2.',
+          d2: 'Печат „Чиста формула · Точен дневен прием“. Вземи -10% за първа поръчка с код WELCOME10!',
+          sitelinks: ['Суроватъчен Протеин', 'Магнезий и Електролити (€12)', 'Колаген за Стави', 'Старт Пакети (-10%)'],
+          promo: 'CRO Синхрон: Sitelink за €12 добавки вдига средната количка над €50 прага'
+        },
+        copy: `Преглед на CTR по Sitelink разширенията в AZ_Search_Core_BG:\n• Насочване на Sitelink 2 директно към #starter-bundles-section (Старт Пакети -10%).\n• Насочване на Sitelink 3 към Хранителни добавки и Витамини за насърчаване на €50 безплатна доставка.`,
+        aiPrompt: `Текстова оптимизация в Google Ads и GA4 проверка на събитието begin_checkout (free_shipping_unlocked).`,
+        steps: `10 мин проверка на CTR на Sitelink разширенията и GA4 фунията (view_item → add_to_cart → purchase).`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#starter-bundles-section?utm_source=google&utm_medium=cpc&utm_campaign=az_search_sitelinks\nЦелеви KPI: Сваляне на Top-of-Funnel отпадането и ръст на количките над €50.`
+      },
+      {
+        id: 'oct-25-brevo-refill',
+        day: 25,
+        dateLabel: 'Неделя, 25 Октомври 2026',
+        time: '10:00',
+        week: 4,
+        channel: 'brevo_email',
+        channelName: 'Brevo Flow 3 (+25d Refill @ €0 CAC)',
+        format: 'email',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (8 мин)',
+        pillar: 'Buy & Refill · Повторни Поръчки при €0 CAC',
+        dept: 'Хранителни Добавки и Витамини (30 дози)',
+        title: 'Първа активация на Ден-25 Brevo Flow 3: Напомняне за презареждане на добавки (@ €0 Ad CAC)',
+        emailPreview: {
+          subject: 'Остават ти 5 дози от твоя Протеин и Магнезий — презареди навреме! ⚡',
+          preview: 'Не прекъсвай тренировъчния си ритъм. Презареди с 1 клик и експресна доставка до Спиди/Еконт.',
+          cta: 'Презареди своите добавки с 1 клик'
+        },
+        copy: `Тема: Остават ти 5 дози от твоя Протеин и Магнезий — презареди навреме! ⚡\n\nЗдравей,\nИзминаха 25 дни от твоята поръчка в ActiveZone! Тъй като нашите опаковки са разчетени за точно 30 дни прием, ти напомняме навреме, за да не прекъсваш възстановяването си.\n\nПоръчай своето презареждане с 1 клик днес — комбинирай с любимата си екипировка над €50 за БЕЗПЛАТНА доставка до Спиди и Еконт!\n\n*(Архитектурно правило: Meta BOF изключва купувачи < 30 дни, така че тази повторна поръчка идва с €0 разход за реклама!)*`,
+        aiPrompt: `Clean automated reminder card showing 30-day calendar progress bar at Day 25 with Whey Protein, Magnesium, and Vitamin D3 bottles.`,
+        steps: `Автоматичен тригер в Brevo Flow 3 (purchase + is_consumable = true + изчакване 25 дни).`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#catalog-section?utm_source=brevo&utm_medium=email&utm_campaign=flow3_day25_refill\nЦелеви KPI: Конверсия при презареждане > 15% при €0 рекламен CAC.`
+      },
+      {
+        id: 'oct-25-story',
+        day: 25,
+        dateLabel: 'Неделя, 25 Октомври 2026',
+        time: '19:00',
+        week: 4,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (IG/FB Story)',
+        format: 'story',
+        template: 'M3: AZ-Story-Sticker (6 мин)',
+        pillar: 'Pillar 3 · Седмична Спортна Анкета',
+        dept: 'Смяна на часовото време + Спорт',
+        title: 'Неделна Анкета: „Смяната на зимното часово време: Сутрин или Вечер ще тренираш тази седмица?“',
+        storyPoll: {
+          question: 'Вече се стъмва по-рано! Кога планираш да тренираш през новата седмица?',
+          options: ['🌅 Сутрин преди работа (за енергия)', '🌙 Вечер след работа (за разтоварване)']
+        },
+        copy: `Рамка 1 (Poll): „Днес върнахме стрелките с 1 час назад! Кога планираш да тренираш през новата седмица — Сутрин преди работа или Вечер след работа?“\nРамка 2: „Утре в 08:00 ч. споделяме 4 трика как да не губиш мотивация, когато навън се стъмва рано!“`,
+        aiPrompt: `9:16 Story background split between crisp sunrise morning and floodlit evening gym in Navy #0D3B66 and Orange #F95738.`,
+        steps: `0 мин копи · 3 мин шаблон M3 · 3 мин Poll стикер.`,
+        utm: `Вътрешно ангажиране в IG Stories · Захранва темата за понеделник (26 октомври).`
+      },
+      {
+        id: 'oct-26-carousel',
+        day: 26,
+        dateLabel: 'Понеделник, 26 Октомври 2026',
+        time: '08:00',
+        week: 5,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (5-Слайд Карусел)',
+        format: 'carousel',
+        template: 'M1: AZ-Carousel-5/7 (12 мин)',
+        pillar: 'Pillar 1 · Есенна Мотивация (40%)',
+        dept: 'Дисциплина + Витамин D3 и Омега-3',
+        title: 'Карусел: „Мотивационни съвети за дни, когато ти се иска да се откажеш (след смяната на часа)“',
+        slides: [
+          { tag: 'СЛАЙД 1 · КОРИЦА', head: 'Как да запазиш ритъм, когато навън се стъмва рано?', body: '4 практични правила за дни, в които ти се иска да пропуснеш тренировката →' },
+          { tag: 'СЛАЙД 2 · ПРАВИЛОТО НА 5-ТЕ МИН', head: '1. Обещай си само 5 минути загрявка', body: 'Най-трудната част е обуването на маратонките. След 5-ата минута тялото само влиза в ритъм.' },
+          { tag: 'СЛАЙД 3 · ПРИГОТВИ ЧАНТАТА', head: '2. Подготви екипа и шейкъра от предната вечер', body: 'Когато чантата те чака до вратата, елиминираш колебанието след работа.' },
+          { tag: 'СЛАЙД 4 · ЕСЕНЕН ТОНУС', head: '3. Компенсирай по-малкото слънце с Витамин D3+K2 и Омега-3', body: 'Поддържат имунитета, ставите и енергията през есенно-зимните месеци.' },
+          { tag: 'СЛАЙД 5 · CTA БАР', head: 'Постоянството побеждава перфектността!', body: 'Запази този пост за дните, в които имаш нужда от малък тласък.' }
+        ],
+        copy: `След смяната на зимното часово време вчера вечерите идват по-бързо, но твоите цели остават същите. ⏳💪\n\nВиж 4 лесни трика как да запазиш тренировъчния си ритъм през късната есен. Ти сутрин или вечер предпочиташ да тренираш през този сезон? Напиши в коментар! 👇\n\n#ActiveZone #StayMotivated #HealthyHabits #BeActiveEveryday`,
+        aiPrompt: `Infographic carousel slides in Deep Navy #0D3B66 and Vibrant Orange #F95738 showing clock icon, packed gym bag by the door, Vitamin D3+Omega-3 softgels, and runner in reflective vest.`,
+        steps: `0 мин копи · 3 мин икони със Sora · 7 мин шаблон M1 · 2 мин планиране.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w5_autumn_discipline\nЦелеви KPI: Запазвания и ангажираност след смяната на часовото време.`
+      },
+      {
+        id: 'oct-27-story',
+        day: 27,
+        dateLabel: 'Вторник, 27 Октомври 2026',
+        time: '12:30',
+        week: 5,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (2x IG Stories)',
+        format: 'story',
+        template: 'M3: AZ-Story-Sticker (6 мин)',
+        pillar: 'Pillar 3 · Сезонна Анкета',
+        dept: 'Плуване, Зала и Имунитет',
+        title: 'Стори Анкета: „Къде пренасяш тренировките си през ноември — в залата/басейна или навън?“',
+        storyPoll: {
+          question: 'Температурите падат! Къде пренасяш тренировките си през ноември?',
+          options: ['🏋️‍♂️🏊 На закрито (Фитнес / Басейн / Зала)', '🏃🏔️ Навън при всяко време (Бягане / Планина)']
+        },
+        copy: `Рамка 1 (Poll): „Температурите падат! Къде пренасяш тренировките си през ноември — На закрито (Фитнес / Басейн / Зала) или Навън при всяко време?“\nРамка 2: „Утре показваме екипировката за плуване в закрит басейн + есенния стак с Витамин D3+K2 и Омега-3!“`,
+        aiPrompt: `9:16 Story graphic comparing indoor heated swimming pool & gym vs brisk outdoor autumn running trail.`,
+        steps: `0 мин копи · 3 мин шаблон M3 · 3 мин Poll стикер.`,
+        utm: `Вътрешно ангажиране в IG Stories · Мост към поста в сряда (Плуване + Витамин D3).`
+      },
+      {
+        id: 'oct-28-carousel',
+        day: 28,
+        dateLabel: 'Сряда, 28 Октомври 2026',
+        time: '18:30',
+        week: 5,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (Карусел 4 Слайда)',
+        format: 'carousel',
+        template: 'M1: AZ-Carousel-5/7 (12 мин)',
+        pillar: 'Pillar 2 · Продукти и Добавки (Sage 30%)',
+        dept: 'Плуване (Спорт #10) + Витамин D3 & Омега-3',
+        title: 'Спорт #10 + Есенен Имунитет: „Плуване в басейн + Витамин D3+K2 и Омега-3“',
+        slides: [
+          { tag: 'СЛАЙД 1 · КОРИЦА', head: 'Плуване + Есенен Имунитет: Нулев стрес за ставите, 100% тонус', body: 'Идеалната комбинация за закрит басейн и силно възстановяване през есента →' },
+          { tag: 'СЛАЙД 2 · ОЧИЛА И ШАПКА', head: '1. Очила за плуване HydroVision с Anti-Fog и UV защита', body: 'Хидродинамичен профил, 3 сменяеми моста за носа и силиконова шапка без скубане.' },
+          { tag: 'СЛАЙД 3 · БЪРЗОСЪХНЕЩА КЪРПА', head: '2. Ултракомпактна микрофибърна кърпа за басейн и зала', body: 'Попива 4 пъти теглото си и съхне за минути в спортната раница.' },
+          { tag: 'СЛАЙД 4 · ЕСЕНЕН ВИТАМИНЕН СТАК', head: '3. Витамин D3+K2 + Омега-3 + Магнезий Бисглицинат', body: 'Чиста формула за имунитет, сърце и мускулен тонус. Безплатна доставка над €50!' }
+        ],
+        copy: `Плуването натоварва цялото тяло с нулев стрес върху ставите — перфектният спорт за есенно-зимния сезон! 🏊‍♂️💧\n\nВ ActiveZone ще откриеш:\n🔹 Очила за плуване с Anti-Fog покритие + силиконови шапки и бързосъхнещи кърпи.\n🔹 Есенен Имунитет и Възстановяване: Комбинирай с ежедневния ни комплекс Витамин D3+K2 + Омега-3 и Магнезий.\n\nРазгледай отдел „Плуване“ и „Хранителни добавки“ на activezone.bg — безплатна доставка над €50 до Спиди и Еконт! 🛒\n\n#ActiveZone #ActiveZoneGear #СпортнаЕкипировка #HealthyHabits`,
+        aiPrompt: `Crisp poolside flat-lay on aqua/navy tiles: anti-fog swimming goggles, silicone swim cap, rolled microfiber towel, and ActiveZone Vitamin D3+K2 & Omega-3 bottle.`,
+        steps: `0 мин копи · 3 мин продуктова визия с Gemini · 7 мин шаблон M1 · 2 мин планиране.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/#catalog-section?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w5_swimming_vitamins\nЦелеви KPI: 100% покритие на всички 10 спорта + Хранителни добавки в рамките на Октомври.`
+      },
+      {
+        id: 'oct-29-brevo-seo',
+        day: 29,
+        dateLabel: 'Четвъртък, 29 Октомври 2026',
+        time: '10:00',
+        week: 5,
+        channel: 'brevo_email',
+        channelName: 'Brevo Месечен SEO Бюлетин',
+        format: 'email',
+        template: 'M4: AZ-Omnichannel-Ad-Mail (10 мин)',
+        pillar: '1-to-4 Repurposing · SEO + Email',
+        dept: 'Блог Наръчник + Маратонки и Колаген',
+        title: 'Месечен Бюлетин #1 (1-to-4 SEO Мост): „Как да изберем маратонки според настилката и да предпазим ставите“',
+        emailPreview: {
+          subject: 'Наръчник за октомври: Как да избереш маратонки според настилката + защита за ставите 👟',
+          preview: 'Пълното ни ръководство от блога + Есенен стак с Колаген, Магнезий и безплатна доставка над €50.',
+          cta: 'Прочети статията и виж препоръчаните модели'
+        },
+        copy: `Тема: Наръчник за октомври: Как да избереш маратонки според настилката + защита за ставите 👟\n\nЗдравей,\nЗнаеш ли защо настилката (асфалт, стадион или планинска пътека) определя типа подметка и грайфер, от които се нуждаят коленете ти?\n\nВ новата ни водеща статия за месеца разглеждаме:\n1. Разликата между маратонки за асфалт и трейл обувки.\n2. Правилото за +0.5 см спортен резерв в СМ калкулатора.\n3. Как Хидролизираният Колаген + Магнезий предпазват ставите след бягане.\n\n[ Прочети наръчника и разгледай селекцията ]`,
+        aiPrompt: `Reuse Monthly SEO Blog Pillar hero image (Running shoe sole cushioning comparison on asphalt vs trail + Collagen & Magnesium recovery stack).`,
+        steps: `0 мин копи (атомизирано от месечната SEO статия чрез 1-to-4 рамката на Стр. 8) · 5 мин Brevo шаблон M4 · 5 мин изпращане.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=brevo&utm_medium=email&utm_campaign=oct_monthly_seo_newsletter\nЦелеви KPI: Трафик към SEO статията и продуктовите страници за бягане и добавки.`
+      },
+      {
+        id: 'oct-30-carousel',
+        day: 30,
+        dateLabel: 'Петък, 30 Октомври 2026',
+        time: '13:00',
+        week: 5,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (Карусел / Общност)',
+        format: 'carousel',
+        template: 'M1: AZ-Carousel-5/7 (11 мин)',
+        pillar: 'Pillar 3 · Общност на Месеца (25%)',
+        dept: 'Финал на Фаза 1 → Мост към Ноември',
+        title: 'Обзор на Общността: „ActiveZone Community of the Month — Октомври в движение!“',
+        slides: [
+          { tag: 'СЛАЙД 1 · КОРИЦА', head: 'Октомври в движение: Първият месец на отбора ActiveZone!', body: '10 спорта, стотици тренировки и една обща мисия →' },
+          { tag: 'СЛАЙД 2 · ВАШИТЕ МОМЕНТИ', head: 'Благодарим за всяко тагнато стори с #ActiveZoneLife!', body: 'Доказахме, че всеки, който прави една малка крачка днес, вече е спортист.' },
+          { tag: 'СЛАЙД 3 · КАКВО СЛЕДВА ПРЕЗ НОЕМВРИ?', head: 'През ноември вдигаме нивото:', body: '• Съвети и тренировки с @coach_danmarkov и @sylvia.activejourney\n• Нови есенни стакове за възстановяване\n• Единственият ни годишен 7-дневен Black Friday спринт в края на ноември!' }
+        ],
+        copy: `Първият ни месец заедно доказа едно: в България има хиляди хора, които избират движението пред оправданията! 🙌\n\nБлагодарим на всеки, който сподели тренировка с #ActiveZoneLife, включи се в #ActiveZoneStart и изпробва нашите Старт Пакети и добавки.\n\n👉 През ноември вдигаме нивото: очаквайте специални тренировъчни видеа от нашите треньори и посланици, плюс най-голямото ни годишно събитие в края на месеца! Тагни своя тренировъчен партньор в коментар! 👇\n\n#ActiveZone #ActiveZoneLife #FitnessBulgaria #BeActiveEveryday`,
+        aiPrompt: `Community collage grid in Deep Navy #0D3B66 frame celebrating October runners, gym lifters, padel players, and hikers with #ActiveZoneLife badge.`,
+        steps: `0 мин копи · 4 мин колаж от топ снимките за месеца · 5 мин шаблон M1 · 2 мин планиране.`,
+        utm: `https://iliyanpetrov07-design.github.io/activezone-bg/?utm_source=ig_fb&utm_medium=organic_social&utm_campaign=phase1_w5_october_wrapup\nЦелеви KPI: Изпълнение на Фаза 1 целите (10,000+ обхват, ER ≥ 5.0%, 300+ имейл абонати).`
+      },
+      {
+        id: 'oct-31-story',
+        day: 31,
+        dateLabel: 'Събота, 31 Октомври 2026',
+        time: '18:00',
+        week: 5,
+        channel: 'meta_organic',
+        channelName: 'Meta Органик (2x Стори Тийзър)',
+        format: 'story',
+        template: 'M3: AZ-Story-Sticker (6 мин)',
+        pillar: 'Pillar 3 · Мост към Ноември (Фаза 2)',
+        dept: 'Посланици @coach_danmarkov & @sylvia.activejourney',
+        title: 'Стори Тийзър за Ноември: „Запознай се с треньорите и посланиците на ActiveZone!“',
+        storyPoll: {
+          question: 'Коя тема искаш да разгледаме първо с нашите посланици през Седмица 1 на ноември?',
+          options: ['🏋️‍♂️ 3 грешки в техниката + Протеин (Даниел)', '🧘‍♀️ 10-мин сутрешен рестарт + Витамини (Силвия)']
+        },
+        copy: `Рамка 1: „Утре започва Ноември — и в отбора на ActiveZone влизат двама специални посланици: фитнес треньорът Даниел Марков (@coach_danmarkov) и Силвия Георгиева (@sylvia.activejourney)!“\nРамка 2 (Poll): „Коя тема искаш да пуснем първо през Седмица 1 на ноември?“`,
+        aiPrompt: `9:16 Story teaser introducing two micro-creator silhouettes/frames: The Authority Coach (Sage 30%) and The Everyday Athlete (Hero/Peer 70%) on Deep Navy #0D3B66.`,
+        steps: `0 мин копи · 3 мин шаблон M3 · 3 мин Poll стикер за плавен преход към Ноемврийския календар.`,
+        utm: `Директен мост към Календар Ноември 2026 (Фаза 2 Evergreen + Посланици DAN15 / SYLVIA15).`
+      }
+    ];
+
+    const WEEK_METADATA = {
+      1: { title: 'Седмица 1 (1–4 Окт): Тийзър и Мулти-Спортна Идентичност', goal: 'Старт на @activezonebg, Манифест Reel, пускане на Google Search (5 Ad Groups) и Brevo потоци 1–3.' },
+      2: { title: 'Седмица 2 (5–11 Окт): Образователна Стойност и Възстановяване (Sage 30%)', goal: 'Флагмански карусел с 5 стъпки за начинаещи, Чеклист за спортната чанта, Триада на добавките и Brevo Имейл #1.' },
+      3: { title: 'Седмица 3 (12–18 Окт): 7-Дневно Предизвикателство #ActiveZoneStart', goal: '10-минутна сутрешна тренировка Reel, Планина и Туризъм карусел, Google Ads QS одит и събиране на реално UGC.' },
+      4: { title: 'Седмица 4 (19–25 Окт): Мост към Конверсии и BOF Ретаргетинг', goal: 'Пълно активиране на Meta BOF Ad Cards 1–4, СМ калкулатор за обувки, Тенис/Падел/Бокс и Първи 25-дневен имейл за презареждане на добавки.' },
+      5: { title: 'Седмица 5 (26–31 Окт): Преход към Evergreen, Плуване и Есенен Имунитет', goal: 'Мотивация след смяната на часа, Плуване + Витамин D3/Омега-3, Месечен SEO бюлетин и тийзър за Ноемврийските посланици.' }
+    };
+
+    let currentChannelFilter = 'all';
+    let currentView = 'grid';
+    let activeModalEvent = null;
+    let activeSlideIndex = 0;
+
+    function getChannelBadgeClass(channel) {
+      if (channel === 'meta_organic') return 'badge-meta-org';
+      if (channel === 'meta_ads') return 'badge-meta-ads';
+      if (channel === 'google_ads') return 'badge-google-ads';
+      return 'badge-brevo';
+    }
+
+    function getShortChannelLabel(channel) {
+      if (channel === 'meta_organic') return 'Meta Органик';
+      if (channel === 'meta_ads') return 'Meta Ads';
+      if (channel === 'google_ads') return 'Google Ads';
+      return 'Brevo Имейл';
+    }
+
+    function getFilteredEvents() {
+      if (currentChannelFilter === 'all') return OCTOBER_EVENTS;
+      return OCTOBER_EVENTS.filter(ev => ev.channel === currentChannelFilter);
+    }
+
+    /* ==========================================================================
+       RENDER VIEW A: 7-COLUMN OCTOBER 2026 CALENDAR GRID
+       Oct 1, 2026 is a Thursday (3 empty cells before day 1: Mon, Tue, Wed)
+       ========================================================================== */
+    function renderGridCalendar() {
+      const grid = document.getElementById('october-days-grid');
+      grid.innerHTML = '';
+      const filtered = getFilteredEvents();
+
+      // 3 leading empty cells (Mon Sep 28, Tue Sep 29, Wed Sep 30)
+      const leadingLabels = ['28 Сеп', '29 Сеп', '30 Сеп'];
+      leadingLabels.forEach(lbl => {
+        const empty = document.createElement('div');
+        empty.className = 'cal-day-cell empty-day';
+        empty.innerHTML = `<div class="cal-day-header"><span>${lbl}</span><span>Подготовка</span></div>`;
+        grid.appendChild(empty);
+      });
+
+      for (let d = 1; d <= 31; d++) {
+        const dayEvents = filtered.filter(e => e.day === d);
+        const cell = document.createElement('div');
+        cell.className = 'cal-day-cell' + (dayEvents.length ? ' has-events' : '');
+
+        let weekNum = d <= 4 ? 1 : d <= 11 ? 2 : d <= 18 ? 3 : d <= 25 ? 4 : 5;
+        cell.innerHTML = `
+          <div class="cal-day-header">
+            <span class="cal-day-num">${d}</span>
+            <span class="cal-week-tag">Седм. ${weekNum}</span>
+          </div>
+        `;
+
+        dayEvents.forEach(ev => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'cal-event-card';
+          btn.setAttribute('data-channel', ev.channel);
+          btn.onclick = () => openCreativeStudio(ev.id);
+          btn.innerHTML = `
+            <div class="ev-top-row">
+              <span class="ev-channel-badge ${getChannelBadgeClass(ev.channel)}">${getShortChannelLabel(ev.channel)}</span>
+              <span class="ev-time">${ev.time}</span>
+            </div>
+            <div class="ev-title">${ev.title}</div>
+            <div class="ev-meta-foot">
+              <span>${ev.template.split(' ')[0]}</span>
+              <span style="color: var(--az-navy); font-weight: 700;">Превю →</span>
+            </div>
+          `;
+          cell.appendChild(btn);
+        });
+
+        grid.appendChild(cell);
+      }
+
+      // 1 trailing cell (Sun Nov 1) to complete 35 cells (5 rows x 7 cols)
+      const trail = document.createElement('div');
+      trail.className = 'cal-day-cell empty-day';
+      trail.innerHTML = `<div class="cal-day-header"><span>1 Ноем</span><span>Фаза 2 Старт</span></div>`;
+      grid.appendChild(trail);
+    }
+
+    /* ==========================================================================
+       RENDER VIEW B: 5-WEEK STRUCTURED LIST
+       ========================================================================== */
+    function renderWeeklyList() {
+      const container = document.getElementById('cal-view-list');
+      container.innerHTML = '';
+      const filtered = getFilteredEvents();
+
+      for (let w = 1; w <= 5; w++) {
+        const wEvents = filtered.filter(e => e.week === w);
+        if (!wEvents.length) continue;
+
+        const block = document.createElement('div');
+        block.className = 'week-block';
+        block.innerHTML = `
+          <div class="week-block-header">
+            <h3>${WEEK_METADATA[w].title}</h3>
+            <span>Цел: ${WEEK_METADATA[w].goal}</span>
+          </div>
+          <div class="week-rows" id="week-rows-${w}"></div>
+        `;
+        container.appendChild(block);
+
+        const rowsEl = block.querySelector(`#week-rows-${w}`);
+        wEvents.forEach(ev => {
+          const card = document.createElement('button');
+          card.type = 'button';
+          card.className = 'cal-event-card';
+          card.style.padding = '0.85rem';
+          card.setAttribute('data-channel', ev.channel);
+          card.onclick = () => openCreativeStudio(ev.id);
+          card.innerHTML = `
+            <div class="ev-top-row" style="margin-bottom: 0.3rem;">
+              <span class="ev-channel-badge ${getChannelBadgeClass(ev.channel)}">${ev.channelName}</span>
+              <span class="ev-time" style="font-weight:700;">${ev.dateLabel} · ${ev.time}</span>
+            </div>
+            <div class="ev-title" style="font-size: 0.9rem; -webkit-line-clamp: 3; margin-bottom: 0.35rem;">${ev.title}</div>
+            <div style="font-size: 0.76rem; color: var(--az-muted); margin-bottom: 0.4rem;">${ev.dept} · ${ev.pillar}</div>
+            <div class="ev-meta-foot" style="border-top: 1px solid var(--az-border); padding-top: 0.4rem;">
+              <span style="font-weight: 700; color: var(--az-charcoal);">⚡ ${ev.template}</span>
+              <span style="color: var(--az-orange); font-weight: 800;">Отвори 12-Мин Студио →</span>
+            </div>
+          `;
+          rowsEl.appendChild(card);
+        });
+      }
+    }
+
+    /* ==========================================================================
+       RENDER VIEW C: INSTAGRAM 9-POST FEED GRID PREVIEW
+       ========================================================================== */
+    function renderIGGrid() {
+      const grid = document.getElementById('ig-grid-tiles');
+      grid.innerHTML = '';
+      const feedPosts = OCTOBER_EVENTS.filter(e => e.channel === 'meta_organic' && (e.format === 'carousel' || e.format === 'reel'));
+
+      const bgThemes = [
+        'linear-gradient(145deg, #082745 0%, #0D3B66 100%)',
+        'linear-gradient(145deg, #0D3B66 0%, #134B80 100%)',
+        'linear-gradient(145deg, #1D1E2C 0%, #0D3B66 100%)'
+      ];
+
+      feedPosts.forEach((ev, idx) => {
+        const tile = document.createElement('button');
+        tile.type = 'button';
+        tile.className = 'ig-grid-tile';
+        tile.style.background = bgThemes[idx % bgThemes.length];
+        tile.onclick = () => openCreativeStudio(ev.id);
+
+        const formatIcon = ev.format === 'reel' ? '🎬 REEL (15s)' : `📑 КАРУСЕЛ (${ev.slides ? ev.slides.length : 5} слайда)`;
+        tile.innerHTML = `
+          <div style="display: flex; justify-content: space-between; width: 100%; font-size: 0.7rem; font-weight: 800; color: #7CE8DF;">
+            <span>ОКТ ${ev.day}</span>
+            <span style="background: rgba(255,255,255,0.14); padding: 0.15rem 0.45rem; border-radius: 4px;">${formatIcon}</span>
+          </div>
+          <div>
+            <div style="font-family: var(--font-heading); font-weight: 800; font-size: 0.92rem; line-height: 1.25; margin-bottom: 0.4rem; color: #FFFFFF;">
+              ${ev.title}
+            </div>
+            <div style="font-size: 0.72rem; color: rgba(255,255,255,0.78);">${ev.dept}</div>
+          </div>
+          <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; border-top: 1px solid rgba(255,255,255,0.16); padding-top: 0.45rem; color: #F95738; font-weight: 800;">
+            <span>#ActiveZone</span>
+            <span>Виж слайдове →</span>
+          </div>
+        `;
+        grid.appendChild(tile);
+      });
+    }
+
+    /* ==========================================================================
+       OPEN INTERACTIVE CREATIVE STUDIO MODAL (<dialog closedby="any">)
+       ========================================================================== */
+    function openCreativeStudio(eventId) {
+      const ev = OCTOBER_EVENTS.find(e => e.id === eventId);
+      if (!ev) return;
+      activeModalEvent = ev;
+      activeSlideIndex = 0;
+
+      document.getElementById('studio-modal-meta').textContent = `${ev.dateLabel} · ${ev.time} ч. · ${ev.channelName}`;
+      document.getElementById('studio-modal-title').textContent = ev.title;
+      document.getElementById('mockup-template-badge').textContent = `⚡ ${ev.template}`;
+      document.getElementById('exec-pillar-badge').textContent = ev.pillar;
+      document.getElementById('exec-steps-summary').textContent = ev.steps;
+      document.getElementById('studio-copy-text').textContent = ev.copy;
+      document.getElementById('studio-ai-prompt').textContent = ev.aiPrompt;
+      document.getElementById('studio-utm-text').textContent = ev.utm;
+
+      renderMockupCanvas();
+
+      const dialog = document.getElementById('creative-studio-dialog');
+      dialog.showModal();
+    }
+
+    function renderMockupCanvas() {
+      const container = document.getElementById('mockup-canvas-container');
+      const label = document.getElementById('mockup-format-label');
+      const ev = activeModalEvent;
+      if (!ev) return;
+
+      if (ev.format === 'carousel' || ev.format === 'reel') {
+        const slides = ev.slides || [];
+        const s = slides[activeSlideIndex] || slides[0];
+        const isReel = ev.format === 'reel';
+        label.textContent = isReel ? '🎬 Интерактивен 9:16 Reel Сториборд' : '📑 Интерактивен Карусел (Плъзни слайдовете)';
+
+        container.innerHTML = `
+          <div class="visual-canvas-card ${isReel ? 'aspect-story' : ''}">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 800; color: #7CE8DF;">
+              <span>@activezonebg</span>
+              <span style="background: rgba(249, 87, 56, 0.9); color: #FFF; padding: 0.18rem 0.55rem; border-radius: 999px;">${s.tag}</span>
+            </div>
+
+            <div style="margin: auto 0; padding: 1.1rem 0;">
+              <div style="font-size: 0.72rem; text-transform: uppercase; color: #7CE8DF; font-weight: 700; margin-bottom: 0.35rem;">
+                ${ev.dept}
+              </div>
+              <h3 style="font-size: 1.25rem; color: #FFFFFF; margin-bottom: 0.65rem; line-height: 1.25;">
+                ${s.head}
+              </h3>
+              <p style="font-size: 0.88rem; color: rgba(255,255,255,0.88); line-height: 1.5; white-space: pre-line;">
+                ${s.body}
+              </p>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.16); padding-top: 0.65rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem;">
+              <span style="font-weight: 700; color: #2EC4B6;">ACTIVEZONE.BG</span>
+              <span>Слайд ${activeSlideIndex + 1} от ${slides.length}</span>
+            </div>
+          </div>
+
+          <div class="slide-controls">
+            <button type="button" class="btn btn-sm" style="background: var(--az-surface); border: 1px solid var(--az-border);" onclick="changeSlide(-1)" ${activeSlideIndex === 0 ? 'disabled' : ''}>
+              ‹ Предишен
+            </button>
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--az-navy);">
+              ${activeSlideIndex + 1} / ${slides.length}
+            </span>
+            <button type="button" class="btn btn-sm btn-orange" onclick="changeSlide(1)" ${activeSlideIndex === slides.length - 1 ? 'disabled' : ''}>
+              Следващ слайд ›
+            </button>
+          </div>
+        `;
+      } else if (ev.format === 'story') {
+        label.textContent = '📱 Интерактивно 9:16 IG Story (Тествай анкетата)';
+        const poll = ev.storyPoll;
+        const optsHtml = poll.options.map((opt) => `
+          <button type="button" class="poll-option-btn" onclick="this.classList.toggle('voted')">
+            <span>${opt}</span>
+            <span>Гласувай</span>
+          </button>
+        `).join('');
+
+        container.innerHTML = `
+          <div class="visual-canvas-card aspect-story">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; font-weight: 700; color: #7CE8DF;">
+              <span>@activezonebg · IG Story</span>
+              <span>Стикер с Анкета</span>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22); border-radius: 14px; padding: 1.15rem; margin: auto 0;">
+              <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1rem; color: #FFFFFF; margin-bottom: 0.65rem;">
+                ${poll.question}
+              </div>
+              ${optsHtml}
+            </div>
+
+            <div style="font-size: 0.74rem; text-align: center; color: rgba(255,255,255,0.75);">
+              Гласувалите влизат в 30-дневния Warm Engagers пул за ретаргетинг
+            </div>
+          </div>
+        `;
+      } else if (ev.format === 'ad_google') {
+        label.textContent = '🔍 Google Search SERP Превю (AZ_Search_Core_BG)';
+        const s = ev.serpPreview;
+        const pills = s.sitelinks.map(sl => `<span style="background: var(--az-gray); border: 1px solid var(--az-border); padding: 0.22rem 0.55rem; border-radius: 6px; font-size: 0.74rem; color: #1A0DAB; font-weight: 600;">${sl}</span>`).join('');
+        container.innerHTML = `
+          <div class="visual-canvas-card aspect-serp">
+            <div style="font-size: 0.74rem; font-weight: 700; color: var(--az-charcoal); margin-bottom: 0.25rem;">
+              Спонсорирано · <span style="color: var(--az-muted); font-weight: 500;">${s.url}</span>
+            </div>
+            <h3 style="font-size: 1.05rem; color: #1A0DAB; font-family: var(--font-body); font-weight: 700; margin-bottom: 0.4rem; line-height: 1.35;">
+              ${s.h1} | ${s.h2} | ${s.h3}
+            </h3>
+            <p style="font-size: 0.83rem; color: #3C4043; line-height: 1.48; margin-bottom: 0.65rem;">
+              ${s.d1} ${s.d2}
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.65rem;">
+              ${pills}
+            </div>
+            <div style="background: rgba(46, 196, 182, 0.12); border-left: 3px solid var(--az-cyan-dark); padding: 0.4rem 0.6rem; font-size: 0.76rem; font-weight: 700; color: var(--az-navy);">
+              🏷️ ${s.promo}
+            </div>
+          </div>
+        `;
+      } else if (ev.format === 'ad_meta') {
+        label.textContent = '📣 Meta Sponsored Ad Card (CBO Архитектура)';
+        const a = ev.adPreview;
+        container.innerHTML = `
+          <div class="visual-canvas-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.73rem; color: #7CE8DF; font-weight: 700;">
+              <span>ActiveZone Bulgaria · Спонсорирано</span>
+              <span>${a.badge}</span>
+            </div>
+            <div style="margin: auto 0; padding: 1rem 0;">
+              <h3 style="font-size: 1.18rem; color: #FFFFFF; margin-bottom: 0.5rem;">${a.headline}</h3>
+              <p style="font-size: 0.84rem; color: rgba(255,255,255,0.85); margin-bottom: 0.9rem;">${a.desc}</p>
+              <div style="background: var(--az-orange); color: #FFFFFF; font-weight: 800; text-align: center; padding: 0.65rem; border-radius: 8px; font-size: 0.86rem;">
+                🛒 ${a.cta}
+              </div>
+            </div>
+            <div style="font-size: 0.72rem; color: rgba(255,255,255,0.75); border-top: 1px solid rgba(255,255,255,0.15); padding-top: 0.5rem;">
+              Изключени: Purchased &lt; 30d (повторните добавки минават през Brevo при €0 CAC)
+            </div>
+          </div>
+        `;
+      } else if (ev.format === 'email') {
+        label.textContent = '✉️ Brevo Имейл Превю (GDPR + Спортна Сегментация)';
+        const m = ev.emailPreview;
+        container.innerHTML = `
+          <div class="visual-canvas-card aspect-serp">
+            <div style="border-bottom: 1px solid var(--az-border); padding-bottom: 0.6rem; margin-bottom: 0.75rem;">
+              <div style="font-size: 0.72rem; color: var(--az-muted); font-weight: 700;">ОТ: ActiveZone Team &lt;hello@activezone.bg&gt;</div>
+              <div style="font-size: 0.92rem; font-weight: 800; color: var(--az-navy); margin-top: 0.2rem;">${m.subject}</div>
+              <div style="font-size: 0.76rem; color: var(--az-muted); margin-top: 0.15rem;">${m.preview}</div>
+            </div>
+            <div style="background: var(--az-navy); color: #FFFFFF; padding: 1rem; border-radius: 10px; text-align: center; margin-bottom: 0.75rem;">
+              <div style="font-family: var(--font-heading); font-weight: 800; font-size: 0.95rem; margin-bottom: 0.35rem;">ACTIVEZONE.BG · ОТ СПОРТИСТИ ЗА СПОРТИСТИ</div>
+              <div style="font-size: 0.78rem; color: #7CE8DF;">Безплатна доставка до Спиди и Еконт над €50 + Преглед и Тест</div>
+            </div>
+            <div style="background: var(--az-orange); color: #FFFFFF; font-weight: 800; text-align: center; padding: 0.65rem; border-radius: 8px; font-size: 0.84rem;">
+              ${m.cta}
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function changeSlide(delta) {
+      if (!activeModalEvent || !activeModalEvent.slides) return;
+      const next = activeSlideIndex + delta;
+      if (next >= 0 && next < activeModalEvent.slides.length) {
+        activeSlideIndex = next;
+        renderMockupCanvas();
+      }
+    }
+
+    function copyStudioField(elementId, btnEl) {
+      const text = document.getElementById(elementId).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btnEl.textContent;
+        btnEl.textContent = '✓ Копирано!';
+        btnEl.style.background = 'var(--az-cyan-dark)';
+        setTimeout(() => {
+          btnEl.textContent = original;
+          btnEl.style.background = '';
+        }, 1600);
+      });
+    }
+
+    function setChannelFilter(channel) {
+      currentChannelFilter = channel;
+      document.querySelectorAll('#channel-filters .filter-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === channel);
+      });
+      renderAllActiveViews();
+    }
+
+    function setCalendarView(view) {
+      currentView = view;
+      document.getElementById('view-grid-btn').classList.toggle('active', view === 'grid');
+      document.getElementById('view-list-btn').classList.toggle('active', view === 'list');
+      document.getElementById('view-ig-btn').classList.toggle('active', view === 'ig');
+
+      document.getElementById('cal-view-grid').hidden = (view !== 'grid');
+      document.getElementById('cal-view-list').hidden = (view !== 'list');
+      document.getElementById('cal-view-ig').hidden = (view !== 'ig');
+      renderAllActiveViews();
+    }
+
+    function switchMonth(month) {
+      const isOct = (month === 'october');
+      document.getElementById('tab-oct').classList.toggle('active', isOct);
+      document.getElementById('tab-nov').classList.toggle('active', !isOct);
+      document.getElementById('october-section').hidden = !isOct;
+      document.getElementById('november-section').hidden = isOct;
+    }
+
+    function renderAllActiveViews() {
+      renderGridCalendar();
+      renderWeeklyList();
+      renderIGGrid();
+    }
+
+    /* Export UTF-8 CSV for 1-Click Upload to Google Sheets / Notion */
+    function exportCalendarCSV() {
+      const headers = ['Дата', 'Час', 'Седмица', 'Канал', 'Формат/Шаблон', 'Стълб (Pillar)', 'Отдел', 'Заглавие', 'Български Текст / Копирайтинг', 'AI Промпт (Sora/Gemini)', 'UTM и KPI'];
+      const rows = OCTOBER_EVENTS.map(ev => [
+        ev.dateLabel,
+        ev.time,
+        `Седмица ${ev.week}`,
+        ev.channelName,
+        ev.template,
+        ev.pillar,
+        ev.dept,
+        ev.title,
+        ev.copy.replace(/\n/g, ' | '),
+        ev.aiPrompt.replace(/\n/g, ' '),
+        ev.utm.replace(/\n/g, ' | ')
+      ]);
+
+      const csvContent = '\uFEFF' + [headers, ...rows]
+        .map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(','))
+        .join('\r\n');
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'ActiveZone_October_2026_Content_Calendar.csv';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    /* Mandatory Fallback for <dialog closedby="any"> on browsers without native closedBy support */
+    const studioDialog = document.getElementById('creative-studio-dialog');
+    if (!('closedBy' in HTMLDialogElement.prototype)) {
+      studioDialog.addEventListener('click', (event) => {
+        if (event.target !== studioDialog) return;
+        const rect = studioDialog.getBoundingClientRect();
+        const isDialogContent = (
+          rect.top <= event.clientY &&
+          event.clientY <= rect.top + rect.height &&
+          rect.left <= event.clientX &&
+          event.clientX <= rect.left + rect.width
+        );
+        if (isDialogContent) return;
+        studioDialog.close();
+      });
+    }
+
+    renderAllActiveViews();
+  </script>
+</body>
+</html>
