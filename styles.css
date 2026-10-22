@@ -1,0 +1,1597 @@
+/* ==========================================================================
+   ActiveZone.bg — Pure-Play D2C Sports & Nutrition Storefront
+   Refined with frontend-design, ui-ux-pro-max & web-design-guidelines
+   Brand Palette:
+   - Deep Navy:      #0D3B66
+   - Vibrant Orange: #F95738
+   - Aqua Cyan:      #2EC4B6
+   - Soft Light Gray:#F4F6F8
+   - Dark Charcoal:  #1D1E2C
+   Typography:
+   - Headings: 'Montserrat', sans-serif (700, 800)
+   - Body:     'Inter', sans-serif (400, 500, 600)
+   ========================================================================== */
+
+:root {
+  --az-navy: #0D3B66;
+  --az-navy-dark: #082745;
+  --az-navy-mid: #134B80;
+  --az-orange: #F95738;
+  --az-orange-hover: #E04325;
+  --az-orange-tint: rgba(249, 87, 56, 0.10);
+  --az-cyan: #2EC4B6;
+  --az-cyan-dark: #1E9E91;
+  --az-cyan-tint: rgba(46, 196, 182, 0.12);
+  --az-gray: #F4F6F8;
+  --az-surface: #FFFFFF;
+  --az-border: #E2E8F0;
+  --az-charcoal: #1D1E2C;
+  --az-muted: #525B6C;
+  --az-success: #15803D;
+  --az-error: #B91C1C;
+  --az-error-bg: #FEF2F2;
+
+  --font-heading: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-card: 0 1px 3px rgba(13, 59, 102, 0.05), 0 6px 16px rgba(13, 59, 102, 0.04);
+  --shadow-hover: 0 12px 28px rgba(13, 59, 102, 0.11);
+  --shadow-modal: 0 24px 48px rgba(13, 59, 102, 0.22);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--az-gray);
+  color: var(--az-charcoal);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Visible keyboard focus (web-design-guidelines & ui-ux-pro-max Priority 1) */
+:focus-visible {
+  outline: 2.5px solid var(--az-cyan);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   1. Clean, Single-Row Site Header (No Top Clutter)
+   ========================================================================== */
+.site-header {
+  background: rgba(13, 59, 102, 0.97);
+  backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 1.25rem;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--az-orange);
+  display: grid;
+  place-items: center;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.logo-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  display: block;
+  line-height: 1.1;
+}
+
+.logo-title span {
+  color: var(--az-cyan);
+}
+
+.logo-subtitle {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 500;
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+/* Buttons (Minimum 44px touch target height for primary controls) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.86rem;
+  min-height: 44px;
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-sm {
+  min-height: 38px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8rem;
+}
+
+.btn-orange {
+  background-color: var(--az-orange);
+  color: #FFFFFF;
+}
+
+.btn-orange:hover {
+  background-color: var(--az-orange-hover);
+}
+
+.btn-cyan {
+  background-color: var(--az-cyan);
+  color: var(--az-charcoal);
+}
+
+.btn-cyan:hover {
+  background-color: var(--az-cyan-dark);
+  color: #FFFFFF;
+}
+
+.btn-navy {
+  background-color: var(--az-navy);
+  color: #FFFFFF;
+}
+
+.btn-navy:hover {
+  background-color: var(--az-navy-mid);
+}
+
+.btn-ghost-light {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-ghost-light:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--az-cyan);
+}
+
+.btn-outline-navy {
+  background: var(--az-surface);
+  color: var(--az-navy);
+  border-color: var(--az-border);
+}
+
+.btn-outline-navy:hover {
+  border-color: var(--az-navy);
+  background: #F8FAFC;
+}
+
+.cart-badge {
+  background: #FFFFFF;
+  color: var(--az-orange);
+  font-size: 0.75rem;
+  font-weight: 800;
+  min-width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   2. Hero Section — Clean, Focused Athletic Direction
+   ========================================================================== */
+.hero-section {
+  background: linear-gradient(130deg, var(--az-navy-dark) 0%, var(--az-navy) 65%, #12487B 100%);
+  color: #FFFFFF;
+  padding: 3.75rem 0 3.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(46, 196, 182, 0.14);
+  color: var(--az-cyan);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 1.1rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 3.6vw, 2.95rem);
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  max-width: 18ch;
+}
+
+.hero-subtitle {
+  font-size: 1.04rem;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 62ch;
+  margin-bottom: 1.75rem;
+  line-height: 1.65;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.hero-aside-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+}
+
+.hero-quote {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  line-height: 1.55;
+  padding-left: 1rem;
+  border-left: 3px solid var(--az-cyan);
+  margin-bottom: 1.35rem;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.metric-item {
+  background: rgba(8, 39, 69, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+}
+
+.metric-val {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--az-cyan);
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-lbl {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 0.15rem;
+}
+
+/* ==========================================================================
+   3. Section Headers & 4 Storefront Departments
+   ========================================================================== */
+.section-block {
+  padding: 3rem 0 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+  color: var(--az-navy);
+}
+
+.section-desc {
+  font-size: 0.95rem;
+  color: var(--az-muted);
+  max-width: 66ch;
+  margin-top: 0.35rem;
+}
+
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.15rem;
+}
+
+.dept-card {
+  background: var(--az-surface);
+  border: 1.5px solid var(--az-border);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.dept-card:hover {
+  border-color: var(--az-navy);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.dept-card.active {
+  border-color: var(--az-orange);
+  box-shadow: 0 0 0 2px var(--az-orange-tint), var(--shadow-hover);
+}
+
+.dept-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.dept-svg-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--az-navy);
+  color: #FFFFFF;
+  display: grid;
+  place-items: center;
+}
+
+.dept-card.active .dept-svg-box {
+  background: var(--az-orange);
+}
+
+.dept-role-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  background: var(--az-cyan-tint);
+  color: var(--az-navy);
+}
+
+.dept-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--az-navy);
+  margin-bottom: 0.5rem;
+}
+
+.dept-sports-list {
+  list-style: none;
+  font-size: 0.82rem;
+  color: var(--az-muted);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.dept-sports-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dept-sports-list li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--az-cyan-dark);
+  flex-shrink: 0;
+}
+
+.dept-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--az-navy);
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--az-border);
+}
+
+/* ==========================================================================
+   4. 1-Click Beginner Starter Bundles ("Старт Пакети" -10%)
+   ========================================================================== */
+.bundles-section {
+  padding: 1.5rem 0;
+}
+
+.bundles-banner {
+  background: var(--az-navy);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  color: #FFFFFF;
+}
+
+.bundles-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.bundles-header h2 {
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  color: #FFFFFF;
+}
+
+.bundles-header p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 65ch;
+  margin-top: 0.3rem;
+}
+
+.bundles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+}
+
+.bundle-card {
+  background: var(--az-surface);
+  color: var(--az-charcoal);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1.5px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.bundle-card:hover {
+  border-color: var(--az-cyan);
+  transform: translateY(-2px);
+}
+
+.bundle-tag-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.65rem;
+}
+
+.bundle-sport-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--az-cyan-tint);
+  color: var(--az-navy);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+.bundle-save-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--az-orange-tint);
+  color: var(--az-orange);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+.bundle-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--az-navy);
+  margin-bottom: 0.55rem;
+}
+
+.bundle-items-list {
+  list-style: none;
+  font-size: 0.8rem;
+  color: var(--az-muted);
+  margin-bottom: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.bundle-items-list li {
+  padding-left: 0.9rem;
+  position: relative;
+}
+
+.bundle-items-list li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  color: var(--az-cyan-dark);
+  font-weight: 700;
+}
+
+.bundle-coach-note {
+  font-size: 0.78rem;
+  background: var(--az-gray);
+  border-left: 3px solid var(--az-cyan);
+  padding: 0.55rem 0.7rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  color: var(--az-charcoal);
+}
+
+.bundle-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--az-border);
+}
+
+.bundle-old-price {
+  font-size: 0.75rem;
+  color: var(--az-muted);
+  text-decoration: line-through;
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+
+.bundle-new-price {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--az-navy);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   5. Catalog Filter Bar (Search + Brand Tier + 11 Sport Pills)
+   ========================================================================== */
+.catalog-controls {
+  background: var(--az-surface);
+  border: 1px solid var(--az-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.controls-top-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--az-border);
+}
+
+.search-box {
+  flex: 1;
+  min-width: 260px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  border: 1.5px solid var(--az-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--az-charcoal);
+  background: var(--az-gray);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--az-navy);
+  background: var(--az-surface);
+}
+
+.search-svg {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--az-muted);
+  pointer-events: none;
+}
+
+.tier-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tier-btn {
+  min-height: 40px;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--az-border);
+  background: var(--az-surface);
+  color: var(--az-charcoal);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.tier-btn:hover {
+  border-color: var(--az-navy);
+}
+
+.tier-btn.active {
+  background: var(--az-navy);
+  color: #FFFFFF;
+  border-color: var(--az-navy);
+}
+
+.sports-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sport-pill {
+  min-height: 38px;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--az-border);
+  background: var(--az-surface);
+  color: var(--az-charcoal);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sport-pill:hover {
+  border-color: var(--az-navy);
+  color: var(--az-navy);
+}
+
+.sport-pill.active {
+  background: var(--az-orange);
+  color: #FFFFFF;
+  border-color: var(--az-orange);
+}
+
+.sport-pill .pill-count {
+  font-size: 0.7rem;
+  background: var(--az-gray);
+  color: var(--az-muted);
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
+
+.sport-pill.active .pill-count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+}
+
+.active-filter-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.15rem;
+  font-size: 0.85rem;
+  color: var(--az-muted);
+}
+
+/* ==========================================================================
+   6. Product Cards — Clean SVG Emblem Stage + Sage Badges + Coach Tip
+   ========================================================================== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.product-card {
+  background: var(--az-surface);
+  border: 1.5px solid var(--az-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+  border-color: var(--az-navy);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.product-visual {
+  padding: 1.15rem 1.25rem 1rem;
+  background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+  border-bottom: 1px solid var(--az-border);
+  cursor: pointer;
+}
+
+.product-top-badges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.brand-tier-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.22rem 0.55rem;
+  border-radius: 6px;
+}
+
+.brand-tier-badge.signature {
+  background: var(--az-navy);
+  color: #FFFFFF;
+}
+
+.brand-tier-badge.partner {
+  background: var(--az-cyan-tint);
+  color: var(--az-navy);
+}
+
+.feature-tag-pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  background: #FFFFFF;
+  color: var(--az-muted);
+  border: 1px solid var(--az-border);
+}
+
+.product-icon-stage {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.product-svg-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--az-surface);
+  border: 1px solid var(--az-border);
+  color: var(--az-navy);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.product-sport-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--az-orange);
+  margin-bottom: 0.2rem;
+}
+
+.product-title {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--az-charcoal);
+  line-height: 1.3;
+}
+
+.product-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.sage-badges-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.sage-badge {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.22rem 0.55rem;
+  border-radius: 6px;
+  background: var(--az-gray);
+  color: var(--az-charcoal);
+}
+
+.sage-badge.surface {
+  background: var(--az-cyan-tint);
+  color: var(--az-navy);
+}
+
+.coach-tip-preview {
+  font-size: 0.8rem;
+  color: var(--az-muted);
+  line-height: 1.48;
+  margin-bottom: 1rem;
+  padding-left: 0.65rem;
+  border-left: 2.5px solid var(--az-navy);
+}
+
+.coach-tip-preview strong {
+  color: var(--az-navy);
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--az-border);
+}
+
+.price-eur {
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--az-navy);
+  font-variant-numeric: tabular-nums;
+}
+
+.card-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* ==========================================================================
+   7. Brevo Lead-Capture Section & Clean Bottom Trust Strip
+   ========================================================================== */
+.brevo-section {
+  background: var(--az-navy);
+  color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.brevo-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.brevo-benefits {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.brevo-benefits li {
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.brevo-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--az-cyan);
+  font-weight: 800;
+}
+
+.brevo-form-card {
+  background: var(--az-surface);
+  color: var(--az-charcoal);
+  padding: 1.6rem;
+  border-radius: var(--radius-md);
+}
+
+.form-field {
+  margin-bottom: 0.95rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--az-navy);
+  margin-bottom: 0.2rem;
+}
+
+.hint {
+  display: block;
+  color: var(--az-muted);
+  font-size: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.85rem;
+  border: 1.5px solid var(--az-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  background: var(--az-surface);
+  color: var(--az-charcoal);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: var(--az-navy);
+}
+
+.error-msg {
+  display: none;
+  color: var(--az-error);
+  font-size: 0.78rem;
+  margin-top: 0.28rem;
+  font-weight: 600;
+}
+
+input:user-invalid,
+select:user-invalid {
+  border-color: var(--az-error);
+  background-color: var(--az-error-bg);
+}
+
+input:user-invalid + .error-msg,
+select:user-invalid + .error-msg {
+  display: block;
+}
+
+input:user-valid,
+select:user-valid {
+  border-color: var(--az-success);
+}
+
+.gdpr-note {
+  font-size: 0.72rem;
+  color: var(--az-muted);
+  margin-top: 0.75rem;
+  line-height: 1.45;
+}
+
+/* Bottom Bulgarian Trust Strip (Moved cleanly from the top header) */
+.bottom-trust-strip {
+  background: var(--az-surface);
+  border-top: 1px solid var(--az-border);
+  border-bottom: 1px solid var(--az-border);
+  padding: 2rem 0;
+  margin-top: 1rem;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.trust-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.trust-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--az-cyan-tint);
+  color: var(--az-navy);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.trust-card h3 {
+  font-size: 0.9rem;
+  color: var(--az-navy);
+  margin-bottom: 0.2rem;
+}
+
+.trust-card p {
+  font-size: 0.8rem;
+  color: var(--az-muted);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   8. Footer + Integrated Real GA4 & GTM Drawer (Not Floating Over Screen)
+   ========================================================================== */
+.site-footer {
+  background: var(--az-navy-dark);
+  color: rgba(255, 255, 255, 0.82);
+  padding: 2.5rem 0;
+  font-size: 0.84rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ga4-footer-panel {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.ga4-panel-summary {
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.ga4-panel-summary::-webkit-details-marker {
+  display: none;
+}
+
+.ga4-panel-body {
+  padding: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #061C33;
+}
+
+.ga4-config-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ga4-config-bar input {
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  min-width: 190px;
+}
+
+.ga4-event-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.event-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid transparent;
+}
+
+.event-chip.fired {
+  background: rgba(46, 196, 182, 0.2);
+  color: var(--az-cyan);
+  border-color: var(--az-cyan);
+  font-weight: 700;
+}
+
+.ga4-log-stream {
+  max-height: 220px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.ga4-log-entry {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--az-cyan);
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+}
+
+.ga4-log-entry .log-top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--az-cyan);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.ga4-log-entry pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #E2E8F0;
+  font-size: 0.72rem;
+}
+
+/* ==========================================================================
+   9. Native <dialog> Modals (PDP, Cart/Checkout, Brevo, Catalog Manager)
+   ========================================================================== */
+dialog {
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 0;
+  max-width: 760px;
+  width: calc(100% - 2rem);
+  margin: auto;
+  background: var(--az-surface);
+  color: var(--az-charcoal);
+  box-shadow: var(--shadow-modal);
+  overflow: hidden;
+}
+
+dialog::backdrop {
+  background-color: rgba(8, 39, 69, 0.65);
+  backdrop-filter: blur(3px);
+}
+
+.modal-header {
+  background: var(--az-navy);
+  color: #FFFFFF;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-header h2 {
+  font-size: 1.08rem;
+}
+
+.modal-close-btn {
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.modal-close-btn:hover {
+  background: var(--az-orange);
+}
+
+.modal-body {
+  padding: 1.5rem;
+  max-height: 82vh;
+  overflow-y: auto;
+}
+
+.pdp-top-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.pdp-visual-box {
+  background: var(--az-gray);
+  border: 1px solid var(--az-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.85rem;
+}
+
+.pdp-svg-stage {
+  width: 84px;
+  height: 84px;
+  border-radius: 20px;
+  background: var(--az-surface);
+  border: 1px solid var(--az-border);
+  color: var(--az-navy);
+  display: grid;
+  place-items: center;
+}
+
+.coach-advice-box {
+  background: #F8FAFC;
+  border: 1px solid var(--az-border);
+  border-left: 4px solid var(--az-navy);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  margin: 0.9rem 0;
+}
+
+.coach-advice-title {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--az-navy);
+  margin-bottom: 0.25rem;
+}
+
+.footwear-calc-box {
+  background: #FFF9F6;
+  border: 1px solid #FED7AA;
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.exchange-badge {
+  background: #DCFCE7;
+  color: var(--az-success);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+}
+
+.calc-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.65rem;
+}
+
+.calc-controls input[type="range"] {
+  flex: 1;
+  accent-color: var(--az-orange);
+}
+
+.calc-result-banner {
+  background: var(--az-surface);
+  border: 1px solid var(--az-border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.9rem;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nutrition-seal-box {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.seal-points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  margin-top: 0.65rem;
+}
+
+.seal-point {
+  background: var(--az-surface);
+  padding: 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  border: 1px solid var(--az-border);
+}
+
+.seal-point strong {
+  display: block;
+  color: var(--az-navy);
+  margin-bottom: 0.15rem;
+}
+
+.ask-coach-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  background: var(--az-gray);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-top: 0.85rem;
+}
+
+.aov-progress-card {
+  background: #F0FDFA;
+  border: 1.5px solid var(--az-cyan);
+  border-radius: var(--radius-md);
+  padding: 0.95rem 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.aov-progress-card.unlocked {
+  background: #F0FDF4;
+  border-color: var(--az-success);
+}
+
+.aov-bar-track {
+  width: 100%;
+  height: 10px;
+  background: #E2E8F0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.aov-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--az-orange) 0%, var(--az-cyan) 100%);
+  transition: width 0.3s ease;
+}
+
+.aov-progress-card.unlocked .aov-bar-fill {
+  background: var(--az-success);
+}
+
+.cross-sell-box {
+  background: #FFF9F6;
+  border: 1.5px dashed var(--az-orange);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.cross-sell-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.65rem;
+}
+
+.cross-sell-pill {
+  background: var(--az-surface);
+  border: 1px solid var(--az-border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--az-border);
+}
+
+.cart-qty-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--az-border);
+  background: var(--az-gray);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.checkout-summary-box {
+  background: var(--az-gray);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  margin-top: 1rem;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.45rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-line.total {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--az-navy);
+  padding-top: 0.6rem;
+  border-top: 1.5px solid var(--az-border);
+  margin-top: 0.6rem;
+}
+
+/* Reduced Motion Respect (ui-ux-pro-max & frontend-design requirement) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1080px) {
+  .departments-grid,
+  .bundles-grid,
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-grid,
+  .brevo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .departments-grid,
+  .bundles-grid,
+  .trust-grid,
+  .pdp-top-grid,
+  .seal-points-grid {
+    grid-template-columns: 1fr;
+  }
+  .header-nav {
+    display: none;
+  }
+}
