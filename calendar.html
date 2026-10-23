@@ -536,10 +536,12 @@
       transform: scale(1.015);
     }
 
-    /* Creative Studio Modal (<dialog>) */
+    /* Creative Studio Modal (<dialog>) — Wide, Auto-Adjustable, Scrollbar-Free */
     dialog#creative-studio-dialog {
-      width: min(1080px, 95vw);
-      max-height: 90vh;
+      max-width: 1380px !important;
+      width: min(1380px, 96vw) !important;
+      height: auto;
+      max-height: none;
       margin: auto;
       border: none;
       border-radius: var(--radius-lg);
@@ -547,7 +549,7 @@
       background: var(--az-surface);
       color: var(--az-charcoal);
       box-shadow: var(--shadow-modal);
-      overflow: hidden;
+      overflow: visible;
     }
 
     dialog#creative-studio-dialog::backdrop {
@@ -558,7 +560,8 @@
     .studio-modal-header {
       background: var(--az-navy);
       color: #FFFFFF;
-      padding: 1.1rem 1.5rem;
+      padding: 0.95rem 1.5rem;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -567,11 +570,13 @@
 
     .studio-modal-body {
       display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      gap: 1.5rem;
-      padding: 1.5rem;
-      max-height: calc(90vh - 76px);
-      overflow-y: auto;
+      grid-template-columns: 420px minmax(0, 1fr);
+      gap: 1.35rem;
+      padding: 1.25rem 1.5rem 1.4rem;
+      height: auto;
+      max-height: none;
+      overflow: visible;
+      align-items: stretch;
     }
 
     /* Left Column: Live Visual Mockup Frame */
@@ -579,31 +584,35 @@
       background: var(--az-gray);
       border: 1px solid var(--az-border);
       border-radius: var(--radius-md);
-      padding: 1.25rem;
+      padding: 1.1rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 1rem;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 0.85rem;
+      height: auto;
     }
 
     .visual-canvas-card {
       width: 100%;
-      max-width: 380px;
+      max-width: 100%;
       background: var(--az-navy);
       color: #FFFFFF;
-      border-radius: 16px;
-      padding: 1.4rem;
-      min-height: 350px;
+      border-radius: 14px;
+      padding: 1.25rem;
+      min-height: 0;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 14px 28px rgba(13, 59, 102, 0.22);
+      gap: 0.85rem;
+      box-shadow: 0 10px 24px rgba(13, 59, 102, 0.18);
       position: relative;
     }
 
     .visual-canvas-card.aspect-story {
-      min-height: 440px;
+      min-height: 290px;
+      height: auto;
       background: linear-gradient(165deg, var(--az-navy-dark) 0%, var(--az-navy) 60%, #134B80 100%);
     }
 
@@ -611,7 +620,8 @@
       background: #FFFFFF;
       color: var(--az-charcoal);
       border: 1px solid var(--az-border);
-      min-height: auto;
+      min-height: 0;
+      height: auto;
     }
 
     .slide-controls {
@@ -619,34 +629,45 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      max-width: 380px;
       gap: 0.5rem;
     }
 
-    /* Right Column: 12-Minute Execution Kit */
+    /* Right Column: 12-Minute Execution Kit (Auto-Adjustable, Zero Scrollbars) */
     .exec-kit-column {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.85rem;
+      min-width: 0;
+    }
+
+    .exec-bottom-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      align-items: stretch;
     }
 
     .exec-box {
       background: var(--az-gray);
       border: 1px solid var(--az-border);
       border-radius: var(--radius-md);
-      padding: 1rem 1.15rem;
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
     }
 
     .exec-box-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 0.55rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.45rem;
       gap: 0.5rem;
     }
 
     .exec-box-head h4 {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--az-navy);
     }
 
@@ -654,25 +675,30 @@
       background: var(--az-surface);
       border: 1px solid var(--az-border);
       border-radius: 8px;
-      padding: 0.75rem;
-      font-size: 0.83rem;
-      line-height: 1.5;
+      padding: 0.7rem 0.85rem;
+      font-size: 0.82rem;
+      line-height: 1.48;
       white-space: pre-wrap;
-      max-height: 170px;
-      overflow-y: auto;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      height: auto;
+      max-height: none;
+      overflow: visible;
       color: var(--az-charcoal);
+      flex: 1;
     }
 
     .copy-btn {
       border: 1px solid var(--az-navy);
       background: var(--az-navy);
       color: #FFFFFF;
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      padding: 0.35rem 0.75rem;
+      padding: 0.32rem 0.75rem;
       border-radius: 6px;
       cursor: pointer;
       transition: background 0.15s ease;
+      flex-shrink: 0;
     }
 
     .copy-btn:hover {
@@ -704,7 +730,7 @@
     }
 
     @media (max-width: 1024px) {
-      .cal-hero-grid, .studio-modal-body {
+      .cal-hero-grid, .studio-modal-body, .exec-bottom-split {
         grid-template-columns: 1fr;
       }
       .templates-grid {
@@ -951,18 +977,18 @@
     <div class="studio-modal-body">
       <!-- Left: Interactive Creative Preview -->
       <div class="mockup-stage">
-        <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; font-weight: 700; color: var(--az-navy);">
+        <div style="width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.45rem; font-size: 0.8rem; font-weight: 700; color: var(--az-navy);">
           <span id="mockup-format-label">Живо Визуално Превю</span>
           <span id="mockup-template-badge" class="tpl-time"></span>
         </div>
 
-        <div id="mockup-canvas-container" style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;"></div>
+        <div id="mockup-canvas-container" style="width: 100%; flex: 1; display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 0.75rem;"></div>
       </div>
 
-      <!-- Right: 12-Minute Execution Kit -->
+      <!-- Right: 12-Minute Execution Kit (Auto-Adjustable, Zero Scrollbars) -->
       <div class="exec-kit-column">
         <div class="exec-box" style="background: rgba(46, 196, 182, 0.1); border-color: rgba(46, 196, 182, 0.35);">
-          <div class="exec-box-head" style="margin-bottom: 0.25rem;">
+          <div class="exec-box-head" style="margin-bottom: 0.2rem;">
             <h4 id="exec-timer-heading">⚡ План за изпълнение за 12 минути</h4>
             <span id="exec-pillar-badge" style="font-size: 0.75rem; font-weight: 700; color: var(--az-navy);"></span>
           </div>
@@ -977,20 +1003,22 @@
           <div id="studio-copy-text" class="copy-pre"></div>
         </div>
 
-        <div class="exec-box">
-          <div class="exec-box-head">
-            <h4>2. AI Промпт за Sora / Gemini / Canva (3 мин)</h4>
-            <button type="button" class="copy-btn" onclick="copyStudioField('studio-ai-prompt', this)">Копирай AI Промпт</button>
+        <div class="exec-bottom-split">
+          <div class="exec-box">
+            <div class="exec-box-head">
+              <h4>2. AI Промпт за Sora / Gemini / Canva (3 мин)</h4>
+              <button type="button" class="copy-btn" onclick="copyStudioField('studio-ai-prompt', this)">Копирай AI Промпт</button>
+            </div>
+            <div id="studio-ai-prompt" class="copy-pre" style="font-family: var(--font-mono); font-size: 0.78rem;"></div>
           </div>
-          <div id="studio-ai-prompt" class="copy-pre" style="font-family: var(--font-mono); font-size: 0.78rem;"></div>
-        </div>
 
-        <div class="exec-box">
-          <div class="exec-box-head">
-            <h4>3. Таргетиране, UTM Линк и Целеви KPI (2 мин)</h4>
-            <button type="button" class="copy-btn" onclick="copyStudioField('studio-utm-text', this)">Копирай UTM</button>
+          <div class="exec-box">
+            <div class="exec-box-head">
+              <h4>3. Таргетиране, UTM Линк и Целеви KPI (2 мин)</h4>
+              <button type="button" class="copy-btn" onclick="copyStudioField('studio-utm-text', this)">Копирай UTM</button>
+            </div>
+            <div id="studio-utm-text" class="copy-pre" style="font-size: 0.79rem;"></div>
           </div>
-          <div id="studio-utm-text" class="copy-pre" style="max-height: 95px; font-size: 0.8rem;"></div>
         </div>
       </div>
     </div>
